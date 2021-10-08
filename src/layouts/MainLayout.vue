@@ -15,7 +15,7 @@
 
 
       </q-toolbar>
-      <q-banner class="bg-dark text-white" inline-actions>
+      <q-banner class="bg-dark text-white" :inline-actions="$q.screen.gt.sm">
         Welcome to my online portfolio / CV. Check out some featured projects here or click the links to see full portfolio, and about / contact pages.
         <template v-slot:action>
           <q-btn-group rounded c>
