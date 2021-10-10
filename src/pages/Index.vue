@@ -3,20 +3,20 @@
   <q-page class="flex column bg-light-blue-1">
     <h4 class="q-pl-md text-h4 text-weight-light text-uppercase text-blue-grey ">Featured Projects</h4>
 
-    <div class="flex q-pa-md row items-start q-gutter-md">
+    <div class="flex justify-center q-pa-md row items-start q-gutter-md">
       <q-card class="my-card" v-for="feature in featured" :key="feature.id">
-        <img src="https://cdn.quasar.dev/img/mountains.jpg">
+        <q-img :src="feature.image"></q-img>
 
         <q-card-section>
           <div class="text-h6">{{feature.name}}</div>
-          <div class="text-subtitle2">by John Doe</div>
+          <div class="text-subtitle2">{{feature.shortDesc}}</div>
         </q-card-section>
 
         <q-card-section class="q-pt-none">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius deserunt maxime pariatur. Excepturi necessitatibus dolor dolorum, dicta libero blanditiis? Nostrum minima unde asperiores dignissimos ducimus architecto quas tempore sunt quos?
+          {{feature.longDesc}}
         </q-card-section>
 
-        <q-card-actions>
+        <q-card-actions align="center">
           <q-btn outline color="info">Source Code</q-btn>
           <q-btn outline color="info">View Live</q-btn>
         </q-card-actions>
