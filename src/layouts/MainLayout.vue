@@ -18,7 +18,7 @@
       <q-banner class="bg-dark text-white" :inline-actions="$q.screen.gt.sm">
         Welcome to my online portfolio / CV. Check out some featured projects here or click the links to see full portfolio, and about / contact pages.
         <template v-slot:action>
-          <q-btn-group rounded c>
+          <q-btn-group rounded>
             <q-btn rounded label="Portfolio" icon="folder" text-color="light-blue-11" to="/portfolio" />
             <q-btn rounded label="About" icon="info" text-color="light-blue-11" to="/about" />
           </q-btn-group>
