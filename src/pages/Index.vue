@@ -5,7 +5,7 @@
     
     <div class="flex wrap justify-center q-pa-md q-gutter-md">
       <q-card class="my-card" v-for="feature in featured" :key="feature.id">
-        <q-img :src="feature.image"></q-img>
+        <q-img :src="feature.image" @click="setBigImage(feature.name, feature.image)" class="cursor-pointer"></q-img>
 
         <q-card-section>
           <div class="text-h6 text-light-blue-10 text-weight-bolder">{{feature.name}}</div>
@@ -22,20 +22,38 @@
             <q-btn type="a" target="_blank" :href="feature.live" color="light-blue-10" size="sm">View Live</q-btn>
           </q-btn-group>
         </q-card-actions>
+        
       </q-card>
-      
     </div>
+      <q-dialog v-model="showBigImage">
+          <q-card style="width: 800px; max-width: 80vw;">
+            <q-card-section class="row items-center q-pb-none">
+              <div class="text-h6">{{currentProject}}</div>
+              <q-space />
+              <q-btn icon="close" flat round dense v-close-popup />
+            </q-card-section>
+
+            <q-img :src="currentImage"></q-img>
+          </q-card>
+        </q-dialog>
   </q-page>
 </template>
 
 <script>
-import { defineComponent } from 'vue';
-import { computed } from 'vue'
+import { defineComponent, computed, ref } from 'vue'
 import { useStore } from 'vuex'
 
 export default {
   setup() {
     const $store = useStore()
+    const showBigImage = ref(false)
+    const currentImage = ref('')
+    const currentProject = ref('')
+    const setBigImage = (name, img) => {
+      showBigImage.value = true
+      currentProject.value = name 
+      currentImage.value = img
+    }
     const featured = computed({
       get: () => $store.state.featured.featured,
     })
@@ -45,7 +63,11 @@ export default {
 
     return {
       indexComponent,
-      featured
+      featured,
+      showBigImage,
+      currentImage,
+      currentProject,
+      setBigImage
     }
   }
 }
