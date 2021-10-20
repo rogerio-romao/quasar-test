@@ -1,40 +1,34 @@
 <template>
   <q-page class="flex column bg-light-blue-1">
     <q-layout view="hHh Lpr lff">
-    
-
       <q-drawer
         v-model="drawer"
         show-if-above
         :width="200"
         :breakpoint="500"
         bordered
-        class="bg-grey-3"
+        class="bg-light-blue-2 q-pt-xl"
       >
         <q-scroll-area class="fit">
           <q-list>
-
-            <template v-for="(menuItem, index) in menuList" :key="index">
-              <q-item clickable :active="menuItem.label === 'Outbox'" v-ripple>
-                <q-item-section avatar>
-                  <q-icon :name="menuItem.icon" />
-                </q-item-section>
+            <template v-for="project in projects" :key="project.id">
+              <q-item clickable v-ripple @click="selectedProject = project.id">
                 <q-item-section>
-                  {{ menuItem.label }}
+                  {{ project.name }}
                 </q-item-section>
               </q-item>
-              <q-separator :key="'sep' + index"  v-if="menuItem.separator" />
             </template>
-
           </q-list>
         </q-scroll-area>
       </q-drawer>
       <q-page-container>
         <q-page padding>
           <h4 class="q-pl-md text-h4 text-weight-light text-uppercase text-blue-grey ">Portfolio</h4>
-          <p v-for="n in 15" :key="n">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit nihil praesentium molestias a adipisci, dolore vitae odit, quidem consequatur optio voluptates asperiores pariatur eos numquam rerum delectus commodi perferendis voluptate?
+          <q-layout view="hHh lpR fFf">
+          <p>
+            {{currentProject.longDesc}}
           </p>
+        </q-layout>
         </q-page>
       </q-page-container>
     </q-layout>
@@ -42,7 +36,28 @@
 </template>
 
 <script>
+import {computed, ref } from 'vue'
+import { useStore } from 'vuex'
+
 export default {
   name: 'Portfolio',
+  setup() {
+    const $store = useStore()
+    const drawer = ref(true)
+    const selectedProject = ref(1)
+    const projects = computed({
+      get: () => $store.state.projects.projects,
+    })
+    const currentProject = computed({
+      get: () => $store.state.projects.projects[selectedProject.value - 1],
+    })
+
+    return {
+      projects,
+      drawer,
+      selectedProject,
+      currentProject
+    }
+  }
 }
 </script>
