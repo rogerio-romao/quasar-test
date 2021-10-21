@@ -1,33 +1,47 @@
 <template>
   <q-page class="flex column bg-light-blue-1">
     <q-layout view="hHh Lpr lff">
-      <q-drawer
+      
+      <q-page-container>
+        <q-drawer
         v-model="drawer"
         show-if-above
-        :width="200"
+        :width="300"
         :breakpoint="500"
         bordered
-        class="bg-light-blue-2 q-pt-xl"
+        class="bg-blue text-white q-pt-xl q-mt-xl"
       >
-        <q-scroll-area class="fit">
-          <q-list>
+        <q-scroll-area class="fit q-mt-lg">
+          <q-list class="q-pt-md">
             <template v-for="project in projects" :key="project.id">
               <q-item clickable v-ripple @click="selectedProject = project.id">
                 <q-item-section>
-                  {{ project.name }}
+                  <q-item class="text-subtitle1 text-weight-medium">
+                    {{ project.name }}
+                  </q-item>
+                  <q-item>
+                    <q-img :src="project.image" height="200px"></q-img>
+                  </q-item>
                 </q-item-section>
               </q-item>
             </template>
           </q-list>
         </q-scroll-area>
       </q-drawer>
-      <q-page-container>
         <q-page padding>
           <h4 class="q-pl-md text-h4 text-weight-light text-uppercase text-blue-grey ">Portfolio</h4>
-          <q-layout view="hHh lpR fFf">
-          <p>
-            {{currentProject.longDesc}}
-          </p>
+          <q-separator />
+          <q-layout view="hHh lpR fFf" class="q-mt-lg">
+            <h4 class="text-h4">
+              {{currentProject.name}}
+            </h4>
+            <p class="text-subtitle1">
+              {{currentProject.shortDesc}}
+            </p>
+            <q-img :src="currentProject.image" width="800px"></q-img>
+            <p class="text-subtitle2">
+              {{currentProject.longDesc}}
+            </p>
         </q-layout>
         </q-page>
       </q-page-container>

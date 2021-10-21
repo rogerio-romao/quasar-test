@@ -7,6 +7,9 @@ export default function () {
         type: "Front-End",
         shortDesc: "A responsive units conversion app.",
         technologies: ["Javascript", "JQuery", "CSS3", "HTML5"],
+        image: require("../../assets/converse.png"),
+        source: "https://codepen.io/rogerio-romao/pen/RwPaaRR",
+        live: "https://codepen.io/rogerio-romao/full/RwPaaRR",
         longDesc:
           "Unit Conversion Program, does distances, weights and temperatures. Sleek flat style design and attention to user experience were my focus, as well as functional and well structured and documented code. Built using JQuery.",
         details: true,
@@ -17,6 +20,9 @@ export default function () {
         type: "Front-End",
         shortDesc: "A todo list App made with JQuery.",
         technologies: ["Javascript", "JQuery", "CSS3", "HTML5"],
+        image: require("../../assets/todov3.png"),
+        source: "https://codepen.io/rogerio-romao/pen/KKpzXeG",
+        live: "https://codepen.io/rogerio-romao/full/KKpzXeG",
         longDesc:
           "This project uses Sass for the presentation side of things, which i worked a lot on and am pretty happy with. I use variables to make it easier, and implemented a theming functionality. Learnt how to include a drag and drop functionality to the interface as well, after researching settle on JQuery for that. App is responsive using media queries.",
         details: true,
@@ -28,6 +34,9 @@ export default function () {
         shortDesc:
           "An app where you can write Markdown language and see the rendered result",
         technologies: ["Javascript", "CSS3", "HTML5"],
+        image: require("../../assets/markdown-preview.png"),
+        source: "https://codepen.io/rogerio-romao/pen/dyoXWNb",
+        live: "https://codepen.io/rogerio-romao/full/dyoXWNb",
         longDesc:
           "A Markdown language editor / previewer app coded from scratch using a couple npm packages.",
       },
@@ -37,6 +46,9 @@ export default function () {
         type: "Front-End",
         shortDesc: "A play on the classic game",
         technologies: ["Javascript", "CSS3", "HTML5"],
+        image: require("../../assets/rock-paper-scissors.png"),
+        source: "https://codepen.io/rogerio-romao/pen/jObOzRN",
+        live: "https://codepen.io/rogerio-romao/pen/jObOzRN",
         longDesc:
           "Someone was playing this on a movie I was watching, and I set out to try to program this game, as fast as possible as a challenge, this was roughly 2hrs work.",
       },
@@ -46,6 +58,9 @@ export default function () {
         type: "Front-End",
         shortDesc: "Pomodoro Session Clock",
         technologies: ["Javascript", "CSS3", "HTML5"],
+        image: require("../../assets/pomodoro.png"),
+        source: "https://codepen.io/rogerio-romao/pen/rNVPBJv",
+        live: "https://codepen.io/rogerio-romao/pen/rNVPBJv",
         longDesc:
           "A timer app with session and break intervals, dealing with the complexities of time and interval management in coding. There is a session timer and a break timer and the cycle through continuously, with independent intervals, and with a beep everytime a timer runs out. The interface colors switch as well between session and break.",
         details: true,
@@ -56,6 +71,9 @@ export default function () {
         type: "Front-End",
         shortDesc: "Guess the number game.",
         technologies: ["Javascript", "CSS3", "HTML5"],
+        image: require("../../assets/guess-number.png"),
+        source: "https://codepen.io/rogerio-romao/pen/XWbQbbN",
+        live: "https://codepen.io/rogerio-romao/pen/XWbQbbN",
         longDesc:
           "My take on the common programming challenge of Guess the Number game. I tried to push this simple problem into as much of a polished app as possible with attention to all details, a nice visualizer pattern for the guesses, automatic adjustment of the maximum guesses determined by the max number chosen by the user and a nice clean interface.",
         details: true,
@@ -66,6 +84,9 @@ export default function () {
         type: "Front-End",
         shortDesc: "A visualizer tool for the famous math sequence.",
         technologies: ["Canvas", "Animation", "Javascript", "CSS3", "HTML5"],
+        image: require("../../assets/collatz.png"),
+        source: "https://codepen.io/rogerio-romao/pen/WNQxaWq",
+        live: "https://codepen.io/rogerio-romao/full/WNQxaWq",
         longDesc:
           "This was mainly about trying to develop working with canvas, animation and requestanimationframe. I used a math sequence as the base to program a graph engine on canvas that adjusts to the kind of data it is receiving. Fully commented out code as to how it works.",
         details: true,
@@ -76,6 +97,9 @@ export default function () {
         type: "Front-End",
         shortDesc: "A JS music player / visualiser / generative art",
         technologies: ["Canvas", "Animation", "Javascript", "CSS3", "HTML5"],
+        image: require("../../assets/spiral.png"),
+        source: "https://codepen.io/rogerio-romao/pen/mdevOwm",
+        live: "https://codepen.io/rogerio-romao/full/mdevOwm",
         longDesc:
           "Very proud of this one, programmed from scratch, pushing the envelope with animation and canvas, custom functions including a stagger using requestanimationframe, and a custom music player. Winner of a Codepen Pick! Also works as a standalone desktop app, planning to have this for sale in App Store.",
         details: true,
@@ -86,6 +110,9 @@ export default function () {
         type: "Front-End",
         shortDesc: "My version of the classic Conway's Game of Life",
         technologies: ["Canvas", "Animation", "Javascript", "CSS3", "HTML5"],
+        image: require("../../assets/gol.png"),
+        source: "https://codepen.io/rogerio-romao/pen/VwvbdZE",
+        live: "https://codepen.io/rogerio-romao/full/VwvbdZE",
         longDesc:
           "This was an entry for a Game of Life challenge in Codepen. Programmed a version of the classic game of life, with a feature to draw your own patterns, and learned a lot while doing so!",
       },
@@ -103,6 +130,9 @@ export default function () {
           "CSS3",
           "HTML5",
         ],
+        image: require("../../assets/randomizer.png"),
+        source: "https://codepen.io/rogerio-romao/pen/Baoqvmm",
+        live: "https://codepen.io/rogerio-romao/full/Baoqvmm",
         longDesc:
           "This is an app that has several categories like countries, colors, number, music keys etc, and the app will get a random value from them. App built in VueJS with Vuetify for the interface, and using a couple of API's for some of the categories.",
         details: true,
@@ -113,6 +143,9 @@ export default function () {
         type: "Front-End",
         shortDesc: "A javascript music player. Simple but beautiful and solid.",
         technologies: ["Javascript", "CSS3", "HTML5"],
+        image: require("../../assets/music-player.png"),
+        source: "https://codepen.io/rogerio-romao/pen/vYNvBzd",
+        live: "https://codepen.io/rogerio-romao/full/vYNvBzd",
         longDesc:
           "I wanted to program something similar to Winamp in Javascript and learn how to handle audio on the web. I am very pleased with the look and functionality i managed to include, and have some ideas to expand it in the future.",
         details: true,
@@ -123,15 +156,18 @@ export default function () {
         type: "Front-End",
         shortDesc: "An app to create random secure pesswords.",
         technologies: ["Vue", "Vuetify", "Javascript", "CSS3", "HTML5"],
+        image: require("../../assets/password-gen.png"),
+        source: "https://codepen.io/rogerio-romao/pen/poyoWKw",
+        live: "https://codepen.io/rogerio-romao/full/poyoWKw",
         longDesc:
           "Constructed using Vue and Vuetify. Select the length of the password you want to generate and if you want numbers and/or special characters included. You also get a handy button to copy the password to clipboard.",
         details: true,
       },
       {
         id: 13,
-        name: "Online Portfolio/CV",
+        name: "Online Portfolio/CV V1",
         type: "Full-Stack",
-        shortDesc: "My online portfolio / CV website",
+        shortDesc: "Online portfolio / CV website earlier version",
         technologies: [
           "Vue",
           "Vuex",
@@ -143,6 +179,9 @@ export default function () {
           "CSS3",
           "HTML5",
         ],
+        image: require("../../assets/portfolio.png"),
+        source: "https://github.com/rogerio-romao/rogerio",
+        live: "https://wonderful-keller-3363b3.netlify.app/",
         longDesc:
           "This website uses Vue as the framework with heavy use of Vuex for the state (separate modules for each component), with bespoke components for every section of the app and clear separation of concerns between data and presentation, where Tailwind is used for most CSS. Deployed on Netlify via Github integration.",
         details: true,
@@ -164,6 +203,9 @@ export default function () {
           "CSS3",
           "HTML5",
         ],
+        image: require("../../assets/catstagram.png"),
+        source: "https://github.com/rogerio-romao/purple-test",
+        live: "https://app.netlify.com/sites/nifty-ptolemy-7b0487",
         longDesc:
           "This was done with Vue as the framework with Nuxt bootstrapping and Vuetify for the presentation. Uses async API calls via Axios.",
         details: true,
@@ -183,6 +225,9 @@ export default function () {
           "CSS3",
           "HTML5",
         ],
+        image: require("../../assets/music-database.png"),
+        source: "https://github.com/rogerio-romao/music-database",
+        live: "https://gracious-albattani-2e9b26.netlify.app/",
         longDesc:
           "Having been a DJ, this is something I wanted to create to help me catalogue my collection. It is done using Vue's Vuex store, with the interface using the familiar Goggle Material Design specs in dark mode, courtesy of Vuetify. App build using Nuxt framework. You can add tracks, edit them and delete them, with fields for the most common properties.",
       },
@@ -203,6 +248,9 @@ export default function () {
           "CSS3",
           "HTML5",
         ],
+        image: require("../../assets/coffee-shop.png"),
+        source: "https://github.com/rogerio-romao/gatsby-coffee-project",
+        live: "https://elated-wing-b66940.netlify.app/",
         longDesc:
           "This is an e-commerce website based on Gatsby and React, with a GraphQL backend, that uses the Contentful API for the content management and FormSpree for the contact form. It has continuous integration when deploying to Github via Netlify and also a webhook setup where if the user changes only the Contentful data and not the code itself, a build is triggered on Netlify. The cart is an implementation of SnipCart based on their API and Gatsby plugin.",
       },
@@ -222,6 +270,9 @@ export default function () {
           "CSS3",
           "HTML5",
         ],
+        image: require("../../assets/chat.png"),
+        source: "https://github.com/rogerio-romao/react-chat-app",
+        live: "https://react-chat-app-fca7d.web.app/",
         longDesc:
           "This is a React application that uses Firebase for the backend. I am using Realtime Database, Authentication via Google and Facebook, Storage, Hosting and Functions. The app is using the latest React syntax, with Hooks, including several custom hooks, for things like api calls, media queries and modal windows. Also uses the Notification api to send messages to users and RSuite UI component library.",
         details: true,
@@ -240,6 +291,9 @@ export default function () {
           "CSS3",
           "HTML5",
         ],
+        image: require("../../assets/netflix-clone.png"),
+        source: "https://github.com/rogerio-romao/netflix-clone-react",
+        live: "https://netflix-clone-f2569.web.app/",
         longDesc:
           "This is a React application that is hosted on Firebase. The front-end is done using Hooks and functional components. The data is coming from the TMDB API, and each title can be clicked on to start and stop a movie preview. This is done using a couple of npm packages.",
       },
@@ -249,6 +303,9 @@ export default function () {
         type: "Front-End",
         shortDesc: "Idle / clicker game made with Vue and Vuex.",
         technologies: ["Vue", "Vuex", "Netlify", "Javascript", "CSS3", "HTML5"],
+        image: require("../../assets/idle-dj.png"),
+        source: "https://github.com/rogerio-romao/idle_dj",
+        live: "https://silly-lamport-fbfed0.netlify.app/",
         longDesc:
           "Still a work in progress, the idea here, more than making something fun to play or with fancy graphics (maybe in the future), was to experiment and learn using Vuex to the full capacity, since there is a tremendous amount of state and inter-dependencies between all the parts of the game. So there is extensive use of modules and a big number of actions and mutations, such as you would have on a real world project.",
         details: true,
