@@ -35,11 +35,17 @@
             <h4 class="text-h4">
               {{currentProject.name}}
             </h4>
-            <p class="text-subtitle1">
+            <p class="text-subtitle2">
+              Type: {{currentProject.type}}
+            </p>
+            <div>
+              <q-badge  color="primary" v-for="tech in currentProject.technologies" :key="tech" :label="tech" class="q-mr-sm" />
+            </div>
+            <p class="text-subtitle2">
               {{currentProject.shortDesc}}
             </p>
             <q-img :src="currentProject.image" width="800px"></q-img>
-            <p class="text-subtitle2">
+            <p class="text-subtitle1">
               {{currentProject.longDesc}}
             </p>
         </q-layout>
