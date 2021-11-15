@@ -76,22 +76,22 @@
 
             <div v-if="currentProject.showDetails">
 
-              <h3>
+              <h4>
                 Project Details
-              </h3>
+              </h4>
 
               <p>
                 {{ currentProject.details.head }}
               </p>
 
-              <div>
+              <div class="q-gutter-sm">
 
-                <img
-                  v-for="(image, i) in currentProject.details.images1"
-                  :key="i"
-                  :src="image"
-                  alt="details from this project"
-                />
+                  <img
+                    v-for="(image, i) in currentProject.details.images1"
+                    :key="i"
+                    :src="image"
+                    alt="details from this project"
+                  />
 
               </div>
 
@@ -99,7 +99,7 @@
 
                 <p>{{ currentProject.details.body }}</p>
 
-                <div>
+                <div class="q-gutter-sm">
 
                   <img
                     v-for="(image, i) in currentProject.details.images2"
@@ -116,7 +116,7 @@
 
                 <p>{{ currentProject.details.footer }}</p>
 
-                <div>
+                <div class="q-gutter-sm">
 
                   <img
                     v-for="(image, i) in currentProject.details.images3"
