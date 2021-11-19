@@ -7,7 +7,6 @@
 
         <q-drawer
           v-model="drawer"
-          show-if-above
           :width="300"
           :breakpoint="500"
           bordered
@@ -50,7 +49,7 @@
 
           <q-separator />
 
-          <q-layout view="hHh lpR fFf" class="q-mt-lg">
+          <q-layout view="hHh lpR fFf" class="q-mt-lg text-center q-px-lg">
 
             <h4 class="text-h4">
               {{currentProject.name}}
@@ -60,36 +59,37 @@
               Type: {{currentProject.type}}
             </p>
 
-            <div>
-              <q-badge  color="primary" v-for="tech in currentProject.technologies" :key="tech" :label="tech" class="q-mr-sm" />
-            </div>
-
             <p class="text-subtitle2">
               {{currentProject.shortDesc}}
             </p>
 
-            <q-img :src="currentProject.image" width="800px"></q-img>
+            <div>
+              <q-badge v-for="(tech, i) in currentProject.technologies" :color="pillColors[i]" :key="tech" :label="tech" class="q-mr-sm q-pa-xs" />
+            </div>
 
-            <p class="text-subtitle1">
+            <q-img :src="currentProject.image" width="800px" class="q-my-lg shadow-8"></q-img>
+
+            <p class="text-subtitle project-description">
               {{currentProject.longDesc}}
             </p>
 
             <div v-if="currentProject.showDetails">
 
-              <h4>
+              <h5>
                 Project Details
-              </h4>
+              </h5>
 
-              <p>
+              <p class="text-left q-mb-lg">
                 {{ currentProject.details.head }}
               </p>
 
-              <div class="q-gutter-sm">
+              <div class="q-gutter-sm q-mb-lg">
 
                   <img
                     v-for="(image, i) in currentProject.details.images1"
                     :key="i"
                     :src="image"
+                    class="shadow-4"
                     alt="details from this project"
                   />
 
@@ -97,14 +97,15 @@
 
               <div v-if="currentProject.details.body">
 
-                <p>{{ currentProject.details.body }}</p>
+                <p class="text-left q-mb-lg">{{ currentProject.details.body }}</p>
 
-                <div class="q-gutter-sm">
+                <div class="q-gutter-sm q-mb-lg">
 
                   <img
                     v-for="(image, i) in currentProject.details.images2"
                     :key="i"
                     :src="image"
+                    class="shadow-4"
                     alt="details from this project"
                   />
 
@@ -114,7 +115,7 @@
 
               <div v-if="currentProject.details.footer">
 
-                <p>{{ currentProject.details.footer }}</p>
+                <p class="text-left q-mb-lg">{{ currentProject.details.footer }}</p>
 
                 <div class="q-gutter-sm">
 
@@ -122,6 +123,7 @@
                     v-for="(image, i) in currentProject.details.images3"
                     :key="i"
                     :src="image"
+                    class="shadow-4"
                     alt="details from this project"
                   />
 
@@ -159,13 +161,22 @@ export default {
     const currentProject = computed({
       get: () => $store.state.projects.projects[selectedProject.value - 1],
     })
+    const pillColors = ['red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-blue', 'cyan', 'teal', 'green', 'light-green', 'lime', 'yellow', 'amber', 'orange', 'deep-orange', 'brown', 'grey', 'blue-grey']
 
     return {
       projects,
       drawer,
       selectedProject,
-      currentProject
+      currentProject,
+      pillColors,
     }
   }
 }
 </script>
+
+<style scoped>
+.project-description {
+  max-width: 800px;
+  margin: 0 auto;
+}
+</style>
