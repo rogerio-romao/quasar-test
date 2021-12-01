@@ -7,8 +7,10 @@
 
         <q-drawer
           v-model="drawer"
-          :width="300"
-          :breakpoint="500"
+          :mini="$q.screen.lt.sm"
+          :width="$q.screen.lt.md ? 175 : 300"
+          :mini-width="100"
+          :breakpoint="300"
           bordered
           class="bg-blue text-white q-pt-xl q-mt-xl"
         >
@@ -23,12 +25,12 @@
 
                   <q-item-section>
 
-                    <q-item class="text-subtitle1 text-weight-medium">
+                    <q-item v-show="!$q.screen.lt.sm" class="text-subtitle1 text-weight-medium">
                       {{ project.name }}
                     </q-item>
 
                     <q-item>
-                      <q-img :src="project.image" height="200px"></q-img>
+                      <q-img :src="project.image" :height="$q.screen.lt.sm ? '50px' : $q.screen.lt.md ? '100px' : '200px'" :width="$q.screen.lt.sm ? '50px' : $q.screen.lt.md ? '100px' : '100%'"></q-img>
                     </q-item>
 
                   </q-item-section>
@@ -67,7 +69,7 @@
               <q-badge v-for="(tech, i) in currentProject.technologies" :color="pillColors[i]" :key="tech" :label="tech" class="q-mr-sm q-pa-xs" />
             </div>
 
-            <q-img :src="currentProject.image" width="800px" class="q-my-lg shadow-8"></q-img>
+            <q-img :src="currentProject.image" width="100%" class="q-my-lg shadow-8"></q-img>
 
             <p class="text-subtitle project-description">
               {{currentProject.longDesc}}
