@@ -1,6 +1,45 @@
 <template>
   <q-page padding class="flex column bg-light-blue-1">
     <!-- content -->
+    <div class="q-pa-md row items-start q-gutter-md">
+      <q-card class="my-card" flat bordered >
+        <q-card-section horizontal>
+          <q-card-section class="q-pt-xs">
+            <div class="text-overline">About Me</div>
+            <div class="text-h5 q-mt-sm q-mb-xs">Rogerio Romao</div>
+            <div class="text-caption text-grey">
+              Intelligent, hard-working, takes pride in quality of work, enjoys learning new skills and does it fast. Experience in managing and leading teams, administrative work, and excellent IT skills. A trusted and valued asset for your company.
+            </div>
+            <div class="text-overline">Location:</div>
+            <div class="text-caption text-grey">London. Available for remote work. Relocation considered.</div>
+            <div class="text-overline">Get In Touch:</div>
+            <div class="q-gutter-md" style="max-width: 600px">
+              <q-input standout v-model="name" label="Your Name" />
+              <q-input standout v-model="email" label="Your Email" type="email" />
+              <q-input standout v-model="subject" label="Subject" />
+              <q-input standout v-model="message" label="Message" type="textarea" />
+            </div>
+          </q-card-section>
+          
+
+          <q-card-section class="col-5 flex flex-center">
+            <q-img
+              class="round"
+              src="../statics/images/rogerio_avatar.jpeg"
+            />
+          </q-card-section>
+        </q-card-section>
+
+        <q-separator />
+
+        <q-card-actions>
+          <q-btn flat round icon="email" />
+          <q-btn flat color="primary">
+            Send Message
+          </q-btn>
+        </q-card-actions>
+      </q-card>
+    </div>
     <h4 class="q-pl-md text-h4 text-weight-light text-uppercase text-blue-grey ">Who am I</h4>
     <p class="q-pl-md text-h5 text-weight-light text-blue-grey ">
       I am a software developer with a passion for building web applications. 
@@ -27,5 +66,20 @@ Here is the Github for the source code for this website: https://github.com/roge
 <script>
 export default {
   name: 'About',
+  data () {
+    return {
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    }
+  }
 }
 </script>
+
+<style scoped>
+.round {
+
+  border-radius: 50%;
+}
+</style>
