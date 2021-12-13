@@ -14,10 +14,12 @@
             <div class="text-caption text-grey">London. Available for remote work. Relocation considered.</div>
             <div class="text-overline">Get In Touch:</div>
             <div class="q-gutter-md" style="max-width: 600px">
-              <q-input standout v-model="name" label="Your Name" />
-              <q-input standout v-model="email" label="Your Email" type="email" />
-              <q-input standout v-model="subject" label="Subject" />
-              <q-input standout v-model="message" label="Message" type="textarea" />
+              <q-form @submit="onSubmit">
+                <q-input standout v-model="name" label="Your Name" :rules="[val => val.length >= 2 || 'Please fill out your name']" />
+                <q-input standout v-model="email" label="Your Email" type="email" :rules="[isValidEmail]" />
+                <q-input standout v-model="subject" label="Subject" :rules="[val => val.length >= 3 || 'Please enter the subject of your message']" />
+                <q-input standout v-model="message" label="Message" type="textarea" :rules="[val => val.length >= 12 || 'Please write your message']" />
+              </q-form>
             </div>
           </q-card-section>
           
@@ -33,10 +35,12 @@
         <q-separator />
 
         <q-card-actions>
-          <q-btn flat round icon="email" />
-          <q-btn flat color="primary">
-            Send Message
-          </q-btn>
+          <q-btn-group round>
+            <q-btn flat round icon="email" />
+            <q-btn flat color="primary">
+              Send Message
+            </q-btn>
+          </q-btn-group>
         </q-card-actions>
       </q-card>
     </div>
@@ -73,7 +77,13 @@ export default {
       subject: '',
       message: ''
     }
+  },
+  methods: {
+    isValidEmail (val) {
+      const emailPattern = /^(?=[a-zA-Z0-9@._%+-]{6,254}$)[a-zA-Z0-9._%+-]{1,64}@(?:[a-zA-Z0-9-]{1,63}\.){1,8}[a-zA-Z]{2,63}$/;
+      return emailPattern.test(val) || 'Invalid email';
   }
+  },
 }
 </script>
 
