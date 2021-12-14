@@ -3,45 +3,42 @@
     <!-- content -->
     <div class="q-pa-md row items-start q-gutter-md">
       <q-card class="my-card" flat bordered >
-        <q-card-section horizontal>
-          <q-card-section class="q-pt-xs">
-            <div class="text-overline">About Me</div>
-            <div class="text-h5 q-mt-sm q-mb-xs">Rogerio Romao</div>
-            <div class="text-caption text-grey">
-              Intelligent, hard-working, takes pride in quality of work, enjoys learning new skills and does it fast. Experience in managing and leading teams, administrative work, and excellent IT skills. A trusted and valued asset for your company.
-            </div>
-            <div class="text-overline">Location:</div>
-            <div class="text-caption text-grey">London. Available for remote work. Relocation considered.</div>
-            <div class="text-overline">Get In Touch:</div>
-            <div class="q-gutter-md" style="max-width: 600px">
-              <q-form @submit="onSubmit">
-                <q-input standout v-model="name" label="Your Name" :rules="[val => val.length >= 2 || 'Please fill out your name']" />
-                <q-input standout v-model="email" label="Your Email" type="email" :rules="[isValidEmail]" />
-                <q-input standout v-model="subject" label="Subject" :rules="[val => val.length >= 3 || 'Please enter the subject of your message']" />
-                <q-input standout v-model="message" label="Message" type="textarea" :rules="[val => val.length >= 12 || 'Please write your message']" />
-              </q-form>
-            </div>
+        <q-form @submit="onSubmit">
+          <q-card-section horizontal>
+            <q-card-section class="q-pt-xs">
+              <div class="text-overline">About Me</div>
+              <div class="text-h5 q-mt-sm q-mb-xs">Rogerio Romao</div>
+              <div class="text-caption text-grey">
+                Intelligent, hard-working, takes pride in quality of work, enjoys learning new skills and does it fast. Experience in managing and leading teams, administrative work, and excellent IT skills. A trusted and valued asset for your company.
+              </div>
+              <div class="text-overline">Location:</div>
+              <div class="text-caption text-grey">London. Available for remote work. Relocation considered.</div>
+              <div class="text-overline">Get In Touch:</div>
+              <div class="q-gutter-md" style="max-width: 600px">
+                
+                  <q-input standout v-model="name" label="Your Name" :rules="[val => val.length >= 2 || 'Please fill out your name']" />
+                  <q-input standout v-model="email" label="Your Email" type="email" :rules="[isValidEmail]" />
+                  <q-input standout v-model="subject" label="Subject" :rules="[val => val.length >= 3 || 'Please enter the subject of your message']" />
+                  <q-input standout v-model="message" label="Message" type="textarea" :rules="[val => val.length >= 12 || 'Please write your message']" />
+                
+              </div>
+            </q-card-section>
+            
+
+            <q-card-section class="col-5 flex flex-center">
+              <q-img
+                class="round"
+                src="../statics/images/rogerio_avatar.jpeg"
+              />
+            </q-card-section>
           </q-card-section>
-          
 
-          <q-card-section class="col-5 flex flex-center">
-            <q-img
-              class="round"
-              src="../statics/images/rogerio_avatar.jpeg"
-            />
-          </q-card-section>
-        </q-card-section>
+          <q-separator />
 
-        <q-separator />
-
-        <q-card-actions>
-          <q-btn-group round>
-            <q-btn flat round icon="email" />
-            <q-btn flat color="primary">
-              Send Message
-            </q-btn>
-          </q-btn-group>
-        </q-card-actions>
+          <q-card-actions>
+            <q-btn type="submit" color="primary" icon="email" label="Send Message" />
+          </q-card-actions>
+        </q-form>
       </q-card>
     </div>
     <h4 class="q-pl-md text-h4 text-weight-light text-uppercase text-blue-grey ">Who am I</h4>
@@ -68,21 +65,44 @@ Here is the Github for the source code for this website: https://github.com/roge
 </template>
 
 <script>
+import { useQuasar } from 'quasar';
+import { ref } from 'vue'
 export default {
   name: 'About',
-  data () {
-    return {
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
+  setup () {
+    const $q = useQuasar()
+
+    const name = ref('')
+    const email = ref('')
+    const subject = ref('')
+    const message = ref('')
+
+    const onSubmit = () => {
+      $q.notify({
+        color: 'green-4',
+        textColor: 'white',
+        icon: 'cloud_done',
+        message: 'Submitted'
+      })
+      name.value = ''
+      email.value = ''
+      subject.value = ''
+      message.value = ''
     }
-  },
-  methods: {
-    isValidEmail (val) {
-      const emailPattern = /^(?=[a-zA-Z0-9@._%+-]{6,254}$)[a-zA-Z0-9._%+-]{1,64}@(?:[a-zA-Z0-9-]{1,63}\.){1,8}[a-zA-Z]{2,63}$/;
-      return emailPattern.test(val) || 'Invalid email';
-  }
+      
+
+    const isValidEmail = (val) => {
+      return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(val)
+    }
+
+    return {
+      name,
+      email,
+      subject,
+      message,
+      isValidEmail,
+      onSubmit
+    }
   },
 }
 </script>
