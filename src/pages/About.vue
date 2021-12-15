@@ -67,6 +67,7 @@ Here is the Github for the source code for this website: https://github.com/roge
 <script>
 import { useQuasar } from 'quasar';
 import { ref } from 'vue'
+import emailjs from 'emailjs-com';
 export default {
   name: 'About',
   setup () {
@@ -78,16 +79,32 @@ export default {
     const message = ref('')
 
     const onSubmit = () => {
-      $q.notify({
-        color: 'green-4',
-        textColor: 'white',
-        icon: 'cloud_done',
-        message: 'Submitted'
-      })
-      name.value = ''
-      email.value = ''
-      subject.value = ''
-      message.value = ''
+      const templateParams = {
+        user_name: name.value,
+        user_email: email.value,
+        subject: subject.value,
+        message: message.value
+      };
+      emailjs.send('gmail', 'contact', templateParams, 'user_P4ZOnZKEGBcxzEW1aDi3E')
+        .then((result) => {
+            $q.notify({
+              color: 'green-4',
+              textColor: 'white',
+              icon: 'cloud_done',
+              message: 'Thank you for your message, I will get back to you as soon as possible.'
+            })
+            name.value = ''
+            email.value = ''
+            subject.value = ''
+            message.value = ''
+        }, (error) => {
+            console.log(error.text);
+            $q.notify({
+                message: 'Error sending message, please try again later.',
+                color: 'negative',
+                icon: 'error'
+            })
+        });
     }
       
 
