@@ -25,7 +25,7 @@
             </q-card-section>
             
 
-            <q-card-section class="col-5 flex flex-center">
+            <q-card-section v-if="$q.screen.gt.xs" class="col-5 flex flex-center">
               <q-img
                 class="round"
                 src="../statics/images/rogerio_avatar.jpeg"
@@ -57,10 +57,13 @@
     <br>
     <q-separator />
     <h4 class="q-pl-md text-h4 text-weight-light text-uppercase text-blue-grey ">Technologies</h4>
-    <p class="q-pl-md text-h5 text-weight-light text-blue-grey ">HTML, CSS, Javascript, Vue, React, Vuex, Nuxt, Git, Bootstrap, Vuetify, Tailwind, Canvas Animations, Express, MongoDB, jQuery, NodeJS, Python...
-
-This website uses many of these, mainly Vue as the framework with heavy use of Vuex for the state, with bespoke components for every section of the app and clear separation of concerns between data and presentation, where i use Tailwind for the base CSS.
-Here is the Github for the source code for this website: https://github.com/rogerio-romao/rogerio</p>
+    <p class="q-pl-md text-h5 text-weight-light text-blue-grey ">HTML, CSS, Javascript, Vue, React, Vuex, Nuxt, Git, Bootstrap, Vuetify, Tailwind, Canvas Animations, Express, MongoDB, jQuery, NodeJS, Python...<br />
+    This website uses many of these, mainly Vue as the framework with heavy use of Vuex for the state, with bespoke components for every section of the app and clear separation of concerns between data and presentation, where i use Tailwind for the base CSS.
+    Here is the Github for the source code for this website: https://github.com/rogerio-romao/rogerio</p>
+    <q-separator />
+    <h4 class="q-pl-md text-h4 text-weight-light text-uppercase text-blue-grey ">Courses</h4>
+    <p class="q-pl-md text-h5 text-weight-light text-blue-grey ">Other than the courses listed below, i also regularly spend time learning using resources such as MDN, W3Schools, FreeCodeCamp - have done nearly all of their certifications. I also enjoy practicing by doing coding challenges / exercises in websites such as Codesignal (163125 points), Codewars(ranked 4kyu, 1293 points) and Edabit (8340 xp). Scored 93% on Hired.com's coding interview tests. Currently taking Harvard University's Computer Science course CS50 online.</p>
+    <courses />
   </q-page>
 </template>
 
@@ -68,7 +71,9 @@ Here is the Github for the source code for this website: https://github.com/roge
 import { useQuasar } from 'quasar';
 import { ref } from 'vue'
 import emailjs from 'emailjs-com';
+import Courses from 'src/components/Courses.vue';
 export default {
+  components: { Courses },
   name: 'About',
   setup () {
     const $q = useQuasar()
@@ -85,7 +90,7 @@ export default {
         subject: subject.value,
         message: message.value
       };
-      emailjs.send('gmail', 'contact', templateParams, 'user_P4ZOnZKEGBcxzEW1aDi3E')
+      emailjs.send('gmail', 'contact', templateParams, process.env.VUE_APP_EMAILJS_USERID)
         .then((result) => {
             $q.notify({
               color: 'green-4',
