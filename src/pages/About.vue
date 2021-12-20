@@ -3,7 +3,7 @@
     <!-- content -->
     <div class="q-pa-md row items-start q-gutter-md">
       <q-card class="my-card" flat bordered >
-        <q-form @submit="onSubmit">
+        <q-form @submit="onSubmit" ref="msgForm">
           <q-card-section horizontal>
             <q-card-section class="q-pt-xs">
               <div class="text-overline">About Me</div>
@@ -96,6 +96,7 @@ export default {
     const email = ref('')
     const subject = ref('')
     const message = ref('')
+    const msgForm = ref(null)
 
     const onSubmit = () => {
       const templateParams = {
@@ -112,6 +113,7 @@ export default {
               icon: 'cloud_done',
               message: 'Thank you for your message, I will get back to you as soon as possible.'
             })
+            msgForm.value.reset()
             name.value = ''
             email.value = ''
             subject.value = ''
@@ -137,7 +139,8 @@ export default {
       subject,
       message,
       isValidEmail,
-      onSubmit
+      onSubmit,
+      msgForm
     }
   },
 }

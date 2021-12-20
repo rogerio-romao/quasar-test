@@ -47,18 +47,18 @@
 
         <q-page padding>
 
-          <h4 class="q-pl-md text-h4 text-weight-light text-uppercase text-blue-grey ">Portfolio</h4>
+          <h4 class="q-pl-md text-h3 text-weight-light text-uppercase text-blue-grey ">Portfolio</h4>
 
           <q-separator />
 
           <q-layout view="hHh lpR fFf" class="q-mt-lg text-center q-px-lg">
 
-            <h4 class="text-h4">
+            <h4 class="text-h4 text-primary text-uppercase">
               {{currentProject.name}}
             </h4>
 
-            <p class="text-subtitle2">
-              Type: {{currentProject.type}}
+            <p class="text-subtitle1 text-light-blue-14">
+              <span class="text-weight-medium">Type:</span> {{currentProject.type}}
             </p>
 
             <p class="text-subtitle2">
@@ -66,7 +66,7 @@
             </p>
 
             <div>
-              <q-badge v-for="(tech, i) in currentProject.technologies" :color="pillColors[i]" :key="tech" :label="tech" class="q-mr-sm q-pa-xs" />
+              <q-badge v-for="(tech, i) in currentProject.technologies" :color="pillColors[i]" :key="tech" :label="tech" class="q-mr-sm q-mt-sm q-pa-sm text-weight-bold" />
             </div>
 
             <q-img :src="currentProject.image" width="100%" class="q-my-lg shadow-8"></q-img>
@@ -77,7 +77,7 @@
 
             <div v-if="currentProject.showDetails">
 
-              <h5>
+              <h5 class="text-h6 text-blue-grey text-uppercase">
                 Project Details
               </h5>
 
@@ -85,7 +85,7 @@
                 {{ currentProject.details.head }}
               </p>
 
-              <div class="q-gutter-sm q-mb-lg">
+              <div class="q-gutter-md q-mb-lg">
 
                   <img
                     v-for="(image, i) in currentProject.details.images1"
