@@ -14,28 +14,27 @@
           <img src="../statics/images/rogerio_avatar.jpeg" alt="avatar">
         </q-avatar>
 
-
       </q-toolbar>
       <q-banner class="bg-dark text-white" :inline-actions="$q.screen.gt.sm">
         Welcome to my online portfolio / CV. Check out some featured projects here or click the links to see full portfolio, and about / contact pages.
         <template v-slot:action>
-          <q-tabs inline-label dense shrink class="text-light-blue-11" active-color="light-blue-13">
+          <q-tabs inline-label dense shrink class="text-light-blue-11" active-color="light-blue-13" >
             <q-route-tab
               icon="home"
               to="/"
-              label="Home"
+              :label="$q.screen.gt.xs ? 'Home' : ''"
               exact
             />
             <q-route-tab
               icon="folder"
               to="/portfolio"
-              label="Portfolio"
+              :label="$q.screen.gt.xs ? 'Portfolio' : ''"
               exact
             />
             <q-route-tab
               icon="info"
               to="/about"
-              label="About"
+              :label="$q.screen.gt.xs ? 'About' : ''"
               exact
             />
           </q-tabs>

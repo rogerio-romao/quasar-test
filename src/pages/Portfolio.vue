@@ -17,7 +17,7 @@
 
           <q-scroll-area class="fit q-mt-lg">
 
-            <q-list class="q-pt-md">
+            <q-list class="q-pt-md" separator>
 
               <template v-for="project in projects" :key="project.id">
 
@@ -29,8 +29,8 @@
                       {{ project.name }}
                     </q-item>
 
-                    <q-item>
-                      <q-img :src="project.image" :height="$q.screen.lt.sm ? '50px' : $q.screen.lt.md ? '100px' : '200px'" :width="$q.screen.lt.sm ? '50px' : $q.screen.lt.md ? '100px' : '100%'"></q-img>
+                    <q-item dense>
+                      <q-img :src="project.image" :height="$q.screen.lt.xs ? '20px' : $q.screen.lt.sm ? '50px' : $q.screen.lt.md ? '100px' : '200px'" :width="$q.screen.lt.sm ? '50px' : $q.screen.lt.md ? '100px' : '100%'"></q-img>
                     </q-item>
 
                   </q-item-section>
@@ -91,7 +91,7 @@
                     v-for="(image, i) in currentProject.details.images1"
                     :key="i"
                     :src="image"
-                    class="shadow-4"
+                    class="shadow-4 detail-image"
                     alt="details from this project"
                   />
 
@@ -107,7 +107,7 @@
                     v-for="(image, i) in currentProject.details.images2"
                     :key="i"
                     :src="image"
-                    class="shadow-4"
+                    class="shadow-4 detail-image"
                     alt="details from this project"
                   />
 
@@ -125,7 +125,7 @@
                     v-for="(image, i) in currentProject.details.images3"
                     :key="i"
                     :src="image"
-                    class="shadow-4"
+                    class="shadow-4 detail-image"
                     alt="details from this project"
                   />
 
@@ -180,5 +180,8 @@ export default {
 .project-description {
   max-width: 800px;
   margin: 0 auto;
+}
+.detail-image {
+  max-width: 100%;
 }
 </style>

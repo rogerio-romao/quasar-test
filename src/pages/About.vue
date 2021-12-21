@@ -37,17 +37,18 @@
 
           <q-card-actions>
             <q-btn type="submit" color="primary" icon="email" label="Send Message" />
+
             <q-btn-group flat>
               <a href="https://github.com/rogerio-romao" target="_blank" class="q-mr-xs">
-                <q-btn label="Github" icon="fab fa-github" color="info"  >
+                <q-btn :label="$q.screen.gt.xs ? 'Github' : ''" icon="fab fa-github" color="info"  >
                 </q-btn>
               </a>
               <a href="https://codepen.io/rogerio-romao" target="_blank" class="q-mr-xs">
-                <q-btn label="Codepen" icon="fab fa-codepen" color="info"  >
+                <q-btn :label="$q.screen.gt.xs ? 'Codepen' : ''" icon="fab fa-codepen" color="info"  >
                 </q-btn>
               </a>
               <a href="https://www.linkedin.com/in/rogerio-romao" target="_blank">
-                <q-btn label="LinkedIn" icon="fab fa-linkedin" color="info"  >
+                <q-btn :label="$q.screen.gt.xs ? 'LinkedIn' : ''" icon="fab fa-linkedin" color="info"  >
                 </q-btn>
               </a>
             </q-btn-group>

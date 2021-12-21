@@ -77,7 +77,7 @@ export default {
 .my-card
   flex: 1
   min-height: 550px
-  min-width: 270px
+  min-width: 250px
   width: 100%
   max-width: 420px
   .source-btn
