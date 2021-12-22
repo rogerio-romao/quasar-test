@@ -5,7 +5,16 @@
     
     <div class="flex wrap justify-center q-pa-md q-gutter-md">
       <q-card class="my-card" v-for="feature in featured" :key="feature.id">
-        <q-img :src="feature.image" @click="setBigImage(feature.name, feature.image)" class="cursor-pointer"></q-img>
+        <q-img :src="feature.image" @click="setBigImage(feature.name, feature.image)" class="cursor-pointer" >
+          <q-tooltip 
+            class="bg-light-blue-10 shadow-4"  
+            transition-show="scale"
+            transition-hide="rotate" 
+            anchor="center middle"
+            self="center middle">
+              Click for big image
+          </q-tooltip>
+        </q-img>
 
         <q-card-section>
           <div class="text-h6 text-light-blue-10 text-weight-bolder">{{feature.name}}</div>
@@ -28,7 +37,7 @@
       <q-dialog v-model="showBigImage">
           <q-card style="width: 800px; max-width: 80vw;">
             <q-card-section class="row items-center q-pb-none">
-              <div class="text-h6">{{currentProject}}</div>
+              <div class="text-h6 text-uppercase text-light-blue-10">{{currentProject}}</div>
               <q-space />
               <q-btn icon="close" flat round dense v-close-popup />
             </q-card-section>

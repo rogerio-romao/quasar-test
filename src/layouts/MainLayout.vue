@@ -11,7 +11,7 @@
         <q-badge color="primary">&copy; 2021</q-badge>
 
         <q-avatar size="lg">
-          <img src="../statics/images/rogerio_avatar.jpeg" alt="avatar">
+          <img src="../statics/images/rogerio_avatar.jpeg" alt="avatar" class="avatar">
         </q-avatar>
 
       </q-toolbar>
@@ -64,3 +64,17 @@ export default defineComponent({
   }
 })
 </script>
+
+<style scoped>
+.avatar:hover {
+  animation: rotate 500ms cubic-bezier( 0.6, -0.28, 0.735, 0.045 );
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+</style>

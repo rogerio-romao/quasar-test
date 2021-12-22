@@ -17,7 +17,7 @@
 
           <q-scroll-area class="fit q-mt-lg">
 
-            <q-list class="q-pt-md" separator>
+            <q-list class="q-pt-md" separator bordered>
 
               <template v-for="project in projects" :key="project.id">
 
@@ -30,7 +30,7 @@
                     </q-item>
 
                     <q-item dense>
-                      <q-img :src="project.image" :height="$q.screen.lt.xs ? '20px' : $q.screen.lt.sm ? '50px' : $q.screen.lt.md ? '100px' : '200px'" :width="$q.screen.lt.sm ? '50px' : $q.screen.lt.md ? '100px' : '100%'"></q-img>
+                      <q-img :src="project.image" :height="$q.screen.lt.xs ? '20px' : $q.screen.lt.sm ? '50px' : $q.screen.lt.md ? '100px' : '200px'" :width="$q.screen.lt.xs ? '20px' : $q.screen.lt.sm ? '50px' : $q.screen.lt.md ? '100px' : '100%'" class="rounded-borders"></q-img>
                     </q-item>
 
                   </q-item-section>
