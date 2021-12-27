@@ -17,9 +17,9 @@ export default function () {
         image: require("../../assets/portfolio.png"),
         shortDesc: "My online portfolio / CV website",
         longDesc:
-          "This website uses Vue as the framework with heavy use of Vuex for the state (separate modules for each component), with bespoke components for every section of the app and clear separation of concerns between data and presentation, where Tailwind is used for most CSS. Deployed on Netlify via Github integration.",
+          "Older iteration of this website. Uses Vue as the framework with heavy use of Vuex for the state (separate modules for each component), with bespoke components for every section of the app and clear separation of concerns between data and presentation, where Tailwind is used for most CSS. Deployed on Netlify via Github integration.",
         source: "https://github.com/rogerio-romao/rogerio",
-        live: "#",
+        live: "https://wonderful-keller-3363b3.netlify.app/",
       },
       {
         id: 3,

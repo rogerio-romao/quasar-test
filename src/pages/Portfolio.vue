@@ -48,7 +48,7 @@
         <q-page padding>
 
           <h4 class="q-pl-md text-h3 text-weight-light text-uppercase text-blue-grey ">Portfolio</h4>
-
+          <p class="q-pl-md text-subtitle1">Click the images on the sidebar to view that project's details.</p>
           <q-separator />
 
           <q-layout view="hHh lpR fFf" class="q-mt-lg text-center q-px-lg">
