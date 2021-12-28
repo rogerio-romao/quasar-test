@@ -215,6 +215,21 @@ export default function () {
             link: "https://www.vuemastery.com/courses/intro-to-vue-js/",
             author: "Vue Mastery",
           },
+          {
+            title: "Intro to Vue3 + TypeScript",
+            link: "https://www.vuemastery.com/courses/vue3-typescript/",
+            author: "Vue Mastery",
+          },
+          {
+            title: "Validating Vue3 Forms",
+            link: "https://www.vuemastery.com/courses/validating-vue3-forms/",
+            author: "Vue Mastery",
+          },
+          {
+            title: "Build a Gmail clone with Vue 3",
+            link: "https://www.vuemastery.com/courses/build-a-gmail-clone-with-vue3/",
+            author: "Vue Mastery",
+          },
         ],
       },
       {
