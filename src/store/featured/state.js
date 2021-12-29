@@ -13,13 +13,13 @@ export default function () {
       },
       {
         id: 2,
-        name: "Online Portfolio/CV",
-        image: require("../../assets/portfolio.png"),
+        name: "Online Portfolio/CV V2",
+        image: require("../../assets/portfoliov2.png"),
         shortDesc: "My online portfolio / CV website",
         longDesc:
-          "Older iteration of this website. Uses Vue as the framework with heavy use of Vuex for the state (separate modules for each component), with bespoke components for every section of the app and clear separation of concerns between data and presentation, where Tailwind is used for most CSS. Deployed on Netlify via Github integration.",
-        source: "https://github.com/rogerio-romao/rogerio",
-        live: "https://wonderful-keller-3363b3.netlify.app/",
+          "My 2.0 portfolio. First time exploring the Quasar UI library. It is Vue3 based, using the composition API, with Vuex handling the data. Went for a streamlined look, and ease of use when editing. Mobile responsive. ",
+        source: "#",
+        live: "#",
       },
       {
         id: 3,
@@ -101,6 +101,16 @@ export default function () {
           "This was an entry for a Game of Life challenge in Codepen. Programmed a version of the classic game of life, with a feature to draw your own patterns, and learned a lot while doing so!",
         source: "https://codepen.io/rogerio-romao/pen/VwvbdZE",
         live: "https://codepen.io/rogerio-romao/full/VwvbdZE",
+      },
+      {
+        id: 11,
+        name: "Online Portfolio/CV",
+        image: require("../../assets/portfolio.png"),
+        shortDesc: "My online portfolio / CV website",
+        longDesc:
+          "Older iteration of this website. Uses Vue as the framework with heavy use of Vuex for the state (separate modules for each component), with bespoke components for every section of the app and clear separation of concerns between data and presentation, where Tailwind is used for most CSS. Deployed on Netlify via Github integration.",
+        source: "https://github.com/rogerio-romao/rogerio",
+        live: "https://wonderful-keller-3363b3.netlify.app/",
       },
     ],
   };

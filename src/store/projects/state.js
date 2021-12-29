@@ -476,6 +476,37 @@ export default function () {
           ],
         },
       },
+      {
+        id: 20,
+        name: "Portfolio V2",
+        type: "Front-End",
+        shortDesc: "My new portfolio, new design using Vue3 and Quasar.",
+        technologies: [
+          "Vue3",
+          "Vuex",
+          "Quasar",
+          "Netlify",
+          "Javascript",
+          "CSS3",
+          "HTML5",
+        ],
+        image: require("../../assets/portfoliov2.png"),
+        source: "#",
+        live: "#",
+        longDesc:
+          "My 2.0 portfolio. First time exploring the Quasar UI library. It is Vue3 based, using the composition API, with Vuex handling the data. Went for a streamlined look, and ease of use when editing. Mobile responsive.",
+        showDetails: true,
+        details: {
+          head: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, magni porro aliquid, optio quasi id ab odit possimus animi dolorem cupiditate laudantium totam eius explicabo! A fugiat adipisci quia vitae!",
+          images1: [
+            require("../../assets/portfoliov2-details1.png"),
+            require("../../assets/portfoliov2-details2.png"),
+            require("../../assets/portfoliov2-details3.png"),
+            require("../../assets/portfoliov2-details4.png"),
+            require("../../assets/portfoliov2-details5.png"),
+          ],
+        },
+      },
     ],
   };
 }
