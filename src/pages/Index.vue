@@ -4,7 +4,7 @@
     <h4 class="q-pl-md text-h4 text-weight-light text-uppercase text-blue-grey ">Featured Projects</h4>
     <p class="q-pl-md text-subtitle1">A selection of some of my best projects. See the portfolio page for a bigger collection of works, and the about page to learn more about me and contact details.</p>
     <q-separator></q-separator>
-    <div class="flex wrap justify-center q-pa-md q-gutter-md">
+    <div class="flex wrap justify-center q-pa-md q-gutter-md q-mt-xl">
       <q-card class="my-card" v-for="feature in featured" :key="feature.id">
         <q-img :src="feature.image" @click="setBigImage(feature.name, feature.image)" class="cursor-pointer" >
           <q-tooltip 

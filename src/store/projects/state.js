@@ -485,7 +485,7 @@ export default function () {
           "Vue3",
           "Vuex",
           "Quasar",
-          "Netlify",
+          "Vercel",
           "Javascript",
           "CSS3",
           "HTML5",
@@ -497,7 +497,7 @@ export default function () {
           "My 2.0 portfolio. First time exploring the Quasar UI library. It is Vue3 based, using the composition API, with Vuex handling the data. Went for a streamlined look, and ease of use when editing. Mobile responsive.",
         showDetails: true,
         details: {
-          head: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, magni porro aliquid, optio quasi id ab odit possimus animi dolorem cupiditate laudantium totam eius explicabo! A fugiat adipisci quia vitae!",
+          head: "For the most part, the biggest lessons from this build were how to use the Quasar UI Framework, which is a opinionated, feature packed library for use with Vu3, and using the composition API from Vue3. It is deployed on Vercel with webhooks on GitHub to automatically deploy changes to the website. The UI is very clean and easy to use, and the code is very readable and easy to understand. The UI is also responsive, and looks great on any size screen. Also created a nice custom form that is connected to an email API, and sends me an email when the form is submitted, after succesfully passing the custom validation. And a accordeon component that is used in the about section, to show courses taken.",
           images1: [
             require("../../assets/portfoliov2-details1.png"),
             require("../../assets/portfoliov2-details2.png"),
