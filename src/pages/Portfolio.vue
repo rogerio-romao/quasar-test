@@ -3,7 +3,7 @@
 
     <q-layout view="hHh Lpr lff">
       
-      <q-page-container>
+      <q-page-container class="scroll overflow-hidden">
 
         <q-drawer
           v-model="drawer"
@@ -21,7 +21,7 @@
 
               <template v-for="project in projects" :key="project.id">
 
-                <q-item clickable v-ripple @click="selectedProject = project.id">
+                <q-item clickable v-ripple @click="() => changeProject(project.id)">
 
                   <q-item-section>
 
@@ -47,7 +47,7 @@
 
         <q-page padding>
 
-          <h4 class="q-pl-md text-h3 text-weight-light text-uppercase text-blue-grey " id="scrollPos">Portfolio</h4>
+          <h4 class="q-pl-md text-h3 text-weight-light text-uppercase text-blue-grey">Portfolio</h4>
           <p class="q-pl-md text-subtitle1 text-blue-grey">Click the images on the sidebar to view that project's details.</p>
           <q-separator />
 
@@ -148,17 +148,21 @@
 </template>
 
 <script>
-import {computed, ref, onMounted } from 'vue'
+import {computed, ref } from 'vue'
 import { useStore } from 'vuex'
+import { scroll } from 'quasar'
 
 export default {
   name: 'Portfolio',
   setup() {
     const $store = useStore()
     const drawer = ref(true)
-    onMounted(() => {
-      document.getElementById('scrollPos').scrollIntoView()
-    })
+    const { getScrollTarget, setVerticalScrollPosition } = scroll
+    const changeProject = (pos) => {
+      selectedProject.value = pos 
+      const target = getScrollTarget()
+      setVerticalScrollPosition(target, 0, 300)
+    }
     const selectedProject = ref(1)
     const projects = computed({
       get: () => $store.state.projects.projects,
@@ -174,6 +178,7 @@ export default {
       selectedProject,
       currentProject,
       pillColors,
+      changeProject
     }
   }
 }
