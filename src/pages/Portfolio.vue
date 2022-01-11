@@ -47,11 +47,11 @@
 
         <q-page padding>
 
-          <h4 class="q-pl-md text-h3 text-weight-light text-uppercase text-blue-grey ">Portfolio</h4>
-          <p class="q-pl-md text-subtitle1">Click the images on the sidebar to view that project's details.</p>
+          <h4 class="q-pl-md text-h3 text-weight-light text-uppercase text-blue-grey " id="scrollPos">Portfolio</h4>
+          <p class="q-pl-md text-subtitle1 text-blue-grey">Click the images on the sidebar to view that project's details.</p>
           <q-separator />
 
-          <q-layout view="hHh lpR fFf" class="q-mt-lg text-center q-px-lg">
+          <q-layout view="hHh lpR fFf" class="q-mt-lg text-center q-px-lg" >
 
             <h4 class="text-h4 text-primary text-uppercase">
               {{currentProject.name}}
@@ -148,7 +148,7 @@
 </template>
 
 <script>
-import {computed, ref } from 'vue'
+import {computed, ref, onMounted } from 'vue'
 import { useStore } from 'vuex'
 
 export default {
@@ -156,6 +156,9 @@ export default {
   setup() {
     const $store = useStore()
     const drawer = ref(true)
+    onMounted(() => {
+      document.getElementById('scrollPos').scrollIntoView()
+    })
     const selectedProject = ref(1)
     const projects = computed({
       get: () => $store.state.projects.projects,

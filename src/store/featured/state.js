@@ -18,8 +18,8 @@ export default function () {
         shortDesc: "My online portfolio / CV website",
         longDesc:
           "My 2.0 portfolio. First time exploring the Quasar UI library. It is Vue3 based, using the composition API, with Vuex handling the data. Went for a streamlined look, and ease of use when editing. Mobile responsive. ",
-        source: "#",
-        live: "#",
+        source: "https://github.com/rogerio-romao/quasar-test",
+        live: "https://portfolio-v2-puce-theta.vercel.app/",
       },
       {
         id: 3,
