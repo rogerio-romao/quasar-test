@@ -53,7 +53,7 @@
 
           <q-layout view="hHh lpR fFf" class="q-mt-lg text-center q-px-lg" >
 
-            <h4 class="text-h4 text-primary text-uppercase">
+            <h4 class="text-h4 text-primary text-uppercase" id="project-scroll">
               {{currentProject.name}}
             </h4>
 
@@ -157,11 +157,11 @@ export default {
   setup() {
     const $store = useStore()
     const drawer = ref(true)
-    const { getScrollTarget, setVerticalScrollPosition } = scroll
+    const { getScrollTarget, setVerticalScrollPosition, getVerticalScrollPosition } = scroll
     const changeProject = (pos) => {
       selectedProject.value = pos 
       const target = getScrollTarget()
-      setVerticalScrollPosition(target, 0, 300)
+      setVerticalScrollPosition(target, 230, 300)
     }
     const selectedProject = ref(1)
     const projects = computed({
