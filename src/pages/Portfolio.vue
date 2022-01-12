@@ -75,6 +75,11 @@
               {{currentProject.longDesc}}
             </p>
 
+            <q-btn-group class="q-ma-lg">
+              <q-btn type="a" target="_blank" :href="currentProject.source" color="light-blue-12" class="source-btn" size="sm">Source Code</q-btn>
+              <q-btn type="a" target="_blank" :href="currentProject.live" color="light-blue-10" size="sm">View Live</q-btn>
+            </q-btn-group>
+
             <div v-if="currentProject.showDetails">
 
               <h5 class="text-h6 text-blue-grey text-uppercase">

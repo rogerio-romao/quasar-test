@@ -22,7 +22,7 @@
           <div class="text-subtitle2 text-info">{{feature.shortDesc}}</div>
         </q-card-section>
 
-        <q-card-section class="q-pt-none">
+        <q-card-section class="q-pt-none feature-longDesc">
           {{feature.longDesc}}
         </q-card-section>
 
@@ -92,4 +92,8 @@ export default {
   max-width: 420px
   .source-btn
     margin-right: 2px
+.feature-longDesc
+  max-height: calc( 100% - 347px )
+  overflow-y: auto
+
 </style>
