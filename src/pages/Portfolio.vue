@@ -11,7 +11,7 @@
           :width="$q.screen.lt.md ? 175 : 280"
           :mini-width="100"
           :breakpoint="300"
-          class="bg-blue text-white q-pt-xl q-mt-xl"
+          class="bg-blue text-white q-pt-xl q-mt-xl shadow-4"
         >
 
           <q-scroll-area class="fit q-mt-lg">
@@ -56,28 +56,28 @@
               {{currentProject.name}}
             </h4>
 
-            <p class="text-subtitle1 text-light-blue-14">
-              <span class="text-weight-medium">Type:</span> {{currentProject.type}}
-            </p>
+            <q-btn-group class="q-mb-lg">
+              <q-btn type="a" target="_blank" :href="currentProject.source" color="light-blue-12" class="source-btn" size="sm">Source Code</q-btn>
+              <q-btn type="a" target="_blank" :href="currentProject.live" color="light-blue-10" size="sm">View Live</q-btn>
+            </q-btn-group>
 
-            <p class="text-subtitle2">
-              {{currentProject.shortDesc}}
+            <p class="text-subtitle1 text-weight-medium ">
+              <span class="text-light-blue-14">Type:</span> {{currentProject.type}}
             </p>
 
             <div>
               <q-badge v-for="(tech, i) in currentProject.technologies" :color="pillColors[i]" :key="tech" :label="tech" class="q-mr-sm q-mt-sm q-pa-sm text-weight-bold" />
             </div>
 
+            <p class="text-subtitle2 q-mt-lg">
+              {{currentProject.shortDesc}}
+            </p>
+
             <q-img :src="currentProject.image" width="100%" class="q-my-lg shadow-8"></q-img>
 
             <p class="text-subtitle project-description">
               {{currentProject.longDesc}}
             </p>
-
-            <q-btn-group class="q-ma-lg">
-              <q-btn type="a" target="_blank" :href="currentProject.source" color="light-blue-12" class="source-btn" size="sm">Source Code</q-btn>
-              <q-btn type="a" target="_blank" :href="currentProject.live" color="light-blue-10" size="sm">View Live</q-btn>
-            </q-btn-group>
 
             <div v-if="currentProject.showDetails">
 
@@ -152,9 +152,10 @@
 </template>
 
 <script>
-import {computed, ref } from 'vue'
+import {computed, ref, onMounted } from 'vue'
 import { useStore } from 'vuex'
 import { scroll, useMeta } from 'quasar'
+import { useRoute } from 'vue-router'
 
 export default {
   name: 'Portfolio',
@@ -162,6 +163,15 @@ export default {
     const metadata = useMeta({
       title: 'Portfolio',
       titleTemplate: title => `${title} - Rogerio's Portfolio`,
+    })
+    const route = useRoute()
+    let id 
+    onMounted(() => {
+      id = route.query.project
+      if (id) {
+        selectedProject.value = +id
+        changeProject(id)
+      }
     })
     const $store = useStore()
     const drawer = ref(true)

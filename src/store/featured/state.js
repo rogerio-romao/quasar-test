@@ -3,6 +3,7 @@ export default function () {
     featured: [
       {
         id: 1,
+        projectRef: 17,
         name: "React Realtime Chat App",
         image: require("../../assets/chat.png"),
         shortDesc: "A realtime chat application a la Whatsapp.",
@@ -13,6 +14,7 @@ export default function () {
       },
       {
         id: 2,
+        projectRef: 20,
         name: "Online Portfolio/CV V2",
         image: require("../../assets/portfoliov2.png"),
         shortDesc: "My online portfolio / CV website",
@@ -23,6 +25,7 @@ export default function () {
       },
       {
         id: 3,
+        projectRef: 19,
         name: "Idle DJ Game",
         image: require("../../assets/idle-dj.png"),
         shortDesc: "Idle / clicker game made with Vue and Vuex.",
@@ -33,6 +36,7 @@ export default function () {
       },
       {
         id: 4,
+        projectRef: 8,
         name: "The Spiral",
         image: require("../../assets/spiral.png"),
         shortDesc: "A JS music player / visualiser / generative art.",
@@ -43,6 +47,7 @@ export default function () {
       },
       {
         id: 5,
+        projectRef: 18,
         name: "Netflix Clone",
         image: require("../../assets/netflix-clone.png"),
         shortDesc: "Netflix clone using TMDB API with movie trailer previews.",
@@ -53,6 +58,7 @@ export default function () {
       },
       {
         id: 6,
+        projectRef: 11,
         name: "Music Player",
         image: require("../../assets/music-player.png"),
         shortDesc: "A javascript music player. Simple but beautiful and solid.",
@@ -63,6 +69,7 @@ export default function () {
       },
       {
         id: 7,
+        projectRef: 10,
         name: "The Randomizer",
         image: require("../../assets/randomizer.png"),
         shortDesc:
@@ -74,6 +81,7 @@ export default function () {
       },
       {
         id: 8,
+        projectRef: 1,
         name: "Converse",
         image: require("../../assets/converse.png"),
         shortDesc: "A responsive units conversion app.",
@@ -84,6 +92,7 @@ export default function () {
       },
       {
         id: 9,
+        projectRef: 6,
         name: "Guess The Number",
         image: require("../../assets/guess-number.png"),
         shortDesc: "Guess the number game.",
@@ -94,6 +103,7 @@ export default function () {
       },
       {
         id: 10,
+        projectRef: 9,
         name: "Game of Life",
         image: require("../../assets/gol.png"),
         shortDesc: "My version of the classic Conway's Game of Life.",
@@ -104,6 +114,7 @@ export default function () {
       },
       {
         id: 11,
+        projectRef: 13,
         name: "Online Portfolio/CV",
         image: require("../../assets/portfolio.png"),
         shortDesc: "My online portfolio / CV website",

@@ -7,6 +7,7 @@
   "private": true,
   "scripts": {
     "dev": "quasar dev",
+    "serve": "quasar serve --history",
     "build": "quasar build",
     "build:pwa": "quasar build -m pwa",
     "lint": "eslint --ext .js,.vue ./",

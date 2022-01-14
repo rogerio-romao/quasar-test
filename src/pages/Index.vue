@@ -30,6 +30,7 @@
           <q-btn-group>
             <q-btn type="a" target="_blank" :href="feature.source" color="light-blue-12" class="source-btn" size="sm">Source Code</q-btn>
             <q-btn type="a" target="_blank" :href="feature.live" color="light-blue-10" size="sm">View Live</q-btn>
+            <q-btn type="a" :to="{path: '/portfolio', query: {project: feature.projectRef}}" color="light-blue-12" class="more-btn" size="sm">More Info</q-btn>
           </q-btn-group>
         </q-card-actions>
         
@@ -98,6 +99,8 @@ export default {
   max-width: 420px
   .source-btn
     margin-right: 2px
+  .more-btn
+    margin-left: 2px
 .feature-longDesc
   max-height: calc( 100% - 347px )
   overflow-y: auto

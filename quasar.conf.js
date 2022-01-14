@@ -45,12 +45,7 @@ module.exports = configure(function (ctx) {
       vueRouterMode: "history", // available values: 'hash', 'history'
       env: require("dotenv").config().parsed,
       distDir: ctx.mode.spa ? "public" : null,
-      extendWebpack(cfg) {
-        cfg.watchOptions = {
-          aggregateTimeout: 200,
-          poll: 1000,
-        };
-      },
+
       // transpile: false,
 
       // Add dependencies for transpiling with Babel (Array of string/regex)
