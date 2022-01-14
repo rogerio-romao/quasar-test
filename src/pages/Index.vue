@@ -4,7 +4,7 @@
     <h4 class="q-pl-md text-h4 text-weight-light text-uppercase text-blue-grey ">Featured Projects</h4>
     <p class="q-pl-md text-subtitle1 q-mb-lg text-blue-grey">A selection of some of my best projects. See the portfolio page for a bigger collection of works, and the about page to learn more about me and contact details.</p>
     <q-separator></q-separator>
-    <div class="flex wrap justify-center q-pa-md q-gutter-md q-mt-lg">
+    <div class="flex wrap justify-center q-pa-md q-gutter-md q-mt-lg card-parent">
       <q-card class="my-card" v-for="feature in featured" :key="feature.id">
         <q-img :src="feature.image" @click="setBigImage(feature.name, feature.image)" class="cursor-pointer" >
           <q-tooltip 
@@ -101,8 +101,19 @@ export default {
     margin-right: 2px
   .more-btn
     margin-left: 2px
+  &:hover
+    box-shadow: 0px 0px 7px 2px #2278cf45
+    animation: 0.19s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s 1 shake
 .feature-longDesc
   max-height: calc( 100% - 347px )
   overflow-y: auto
-
+@keyframes shake
+  from
+    transform: translate(0px, 0px)
+  25%
+    transform: translate(-1px, 1px)
+  75%
+    transform: translate(1px, -1px)
+  to
+    transform: translate(0px, 0px)
 </style>
