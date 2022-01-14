@@ -8,16 +8,15 @@
         <q-drawer
           v-model="drawer"
           :mini="$q.screen.lt.sm"
-          :width="$q.screen.lt.md ? 175 : 300"
+          :width="$q.screen.lt.md ? 175 : 280"
           :mini-width="100"
           :breakpoint="300"
-          bordered
           class="bg-blue text-white q-pt-xl q-mt-xl"
         >
 
           <q-scroll-area class="fit q-mt-lg">
 
-            <q-list class="q-pt-md" separator bordered>
+            <q-list class="q-pt-md" >
 
               <template v-for="project in projects" :key="project.id">
 
