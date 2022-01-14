@@ -155,14 +155,18 @@
 <script>
 import {computed, ref } from 'vue'
 import { useStore } from 'vuex'
-import { scroll } from 'quasar'
+import { scroll, useMeta } from 'quasar'
 
 export default {
   name: 'Portfolio',
   setup() {
+    const metadata = useMeta({
+      title: 'Portfolio',
+      titleTemplate: title => `${title} - Rogerio's Portfolio`,
+    })
     const $store = useStore()
     const drawer = ref(true)
-    const { getScrollTarget, setVerticalScrollPosition, getVerticalScrollPosition } = scroll
+    const { getScrollTarget, setVerticalScrollPosition } = scroll
     const changeProject = (pos) => {
       selectedProject.value = pos 
       const target = getScrollTarget()
@@ -183,7 +187,8 @@ export default {
       selectedProject,
       currentProject,
       pillColors,
-      changeProject
+      changeProject,
+      metadata
     }
   }
 }

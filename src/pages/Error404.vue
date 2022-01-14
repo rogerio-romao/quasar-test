@@ -24,8 +24,19 @@
 
 <script>
 import { defineComponent } from 'vue'
+import { useMeta } from 'quasar'
 
 export default defineComponent({
-  name: 'Error404'
+  name: 'Error404',
+  setup() {
+    const metadata = useMeta({
+      title: '404 - Not Found',
+      titleTemplate: title => `${title} - Rogerio's Portfolio`,
+    })
+
+    return {
+      metadata,
+    }
+  }
 })
 </script>

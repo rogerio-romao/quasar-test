@@ -83,7 +83,7 @@
 </template>
 
 <script>
-import { useQuasar } from 'quasar';
+import { useQuasar, useMeta } from 'quasar';
 import { ref } from 'vue'
 import emailjs from 'emailjs-com';
 import Courses from 'src/components/Courses.vue';
@@ -92,7 +92,10 @@ export default {
   name: 'About',
   setup () {
     const $q = useQuasar()
-
+    const metadata = useMeta({
+      title: 'About Me',
+      titleTemplate: title => `${title} - Rogerio's Portfolio`,
+    })
     const name = ref('')
     const email = ref('')
     const subject = ref('')
@@ -141,7 +144,8 @@ export default {
       message,
       isValidEmail,
       onSubmit,
-      msgForm
+      msgForm,
+      metadata
     }
   },
 }

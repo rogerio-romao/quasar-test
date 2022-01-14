@@ -52,9 +52,14 @@
 <script>
 import { defineComponent, computed, ref } from 'vue'
 import { useStore } from 'vuex'
+import { useMeta } from 'quasar'
 
 export default {
   setup() {
+    const metadata = useMeta({
+      title: 'Featured Projects',
+      titleTemplate: title => `${title} - Rogerio's Portfolio`,
+    })
     const $store = useStore()
     const showBigImage = ref(false)
     const currentImage = ref('')
@@ -77,7 +82,8 @@ export default {
       showBigImage,
       currentImage,
       currentProject,
-      setBigImage
+      setBigImage,
+      metadata
     }
   }
 }
