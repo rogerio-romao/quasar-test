@@ -42,17 +42,23 @@
       </q-banner>
     </q-header>
 
-
-    <q-page-container>
-      
-      <router-view />
-    </q-page-container>
+      <q-page-container>
+          <router-view v-slot="{Component}">
+            <transition
+              appear
+              enter-active-class="animated fadeIn"
+              leave-active-class="animated fadeOut"
+            >
+              <component :is="Component" />
+            </transition>
+          </router-view>
+      </q-page-container>
 
   </q-layout>
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { defineComponent, Component } from 'vue'
 
 export default defineComponent({
   name: 'MainLayout',
