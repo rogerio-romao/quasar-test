@@ -10,8 +10,8 @@
           :mini="$q.screen.lt.sm"
           :width="$q.screen.lt.md ? 175 : 280"
           :mini-width="100"
-          :breakpoint="300"
-          class="bg-blue text-white q-pt-xl q-mt-xl shadow-4"
+          :breakpoint="320"
+          class="bg-light-blue-6 text-white q-pt-xl q-mt-xl shadow-4"
         >
 
           <q-scroll-area class="fit q-mt-lg">

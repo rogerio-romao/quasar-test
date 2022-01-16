@@ -15,8 +15,8 @@
         </q-avatar>
 
       </q-toolbar>
-      <q-banner class="bg-dark text-white" :inline-actions="$q.screen.gt.sm">
-        Welcome to my online portfolio / CV. Check out some featured projects here or click the links to see full portfolio, and about / contact pages.
+      <q-banner class="bg-dark text-white" :inline-actions="$q.screen.gt.xs">
+        Welcome to my online portfolio / CV. 
         <template v-slot:action>
           <q-tabs inline-label dense shrink class="text-light-blue-11" active-color="light-blue-13" >
             <q-route-tab
