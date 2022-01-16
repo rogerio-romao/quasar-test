@@ -52,7 +52,7 @@
 
           <q-layout view="hHh lpR fFf" class="q-mt-lg text-center q-px-lg" >
 
-            <h4 class="text-h4 text-primary text-uppercase" id="project-scroll">
+            <h4 class="text-h4  text-uppercase" id="project-scroll">
               {{currentProject.name}}
             </h4>
 
@@ -61,15 +61,15 @@
               <q-btn type="a" target="_blank" :href="currentProject.live" color="light-blue-10" size="sm">View Live</q-btn>
             </q-btn-group>
 
-            <p class="text-subtitle1 text-weight-medium ">
-              <span class="text-light-blue-14">Type:</span> {{currentProject.type}}
+            <p class="text-subtitle1 text-primary">
+              <span class="text-weight-medium">Type:</span> {{currentProject.type}}
             </p>
 
             <div>
               <q-badge v-for="(tech, i) in currentProject.technologies" :color="pillColors[i]" :key="tech" :label="tech" class="q-mr-sm q-mt-sm q-pa-sm text-weight-bold shadow-2" />
             </div>
 
-            <p class="text-subtitle2 q-mt-lg">
+            <p class="text-subtitle1 font-weight-medium q-mt-lg">
               {{currentProject.shortDesc}}
             </p>
 
