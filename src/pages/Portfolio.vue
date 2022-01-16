@@ -8,7 +8,7 @@
         <q-drawer
           v-model="drawer"
           :mini="mini"
-          width="280"
+          :width="$q.screen.lt.sm ? 180 : 280"
           @mouseover="mini = false"
           @mouseout="mini = true"
           :mini-width="100"
@@ -31,7 +31,7 @@
                     </q-item>
 
                     <q-item dense>
-                      <q-img :src="project.image" :height="mini ? '50px' :  '200px'" :width="mini ? '50px' :  '100%'" class="rounded-borders shadow-6"></q-img>
+                      <q-img :src="project.image" :height="mini ? '50px' :  $q.screen.lt.sm ? '120px' : '200px'" :width="mini ? '50px' : $q.screen.lt.sm ? '120px' : '100%'" class="rounded-borders shadow-6"></q-img>
                     </q-item>
 
                   </q-item-section>
