@@ -29,7 +29,7 @@
                     </q-item>
 
                     <q-item dense>
-                      <q-img :src="project.image" :height="$q.screen.lt.xs ? '20px' : $q.screen.lt.sm ? '50px' : $q.screen.lt.md ? '100px' : '200px'" :width="$q.screen.lt.xs ? '20px' : $q.screen.lt.sm ? '50px' : $q.screen.lt.md ? '100px' : '100%'" class="rounded-borders"></q-img>
+                      <q-img :src="project.image" :height="$q.screen.lt.xs ? '20px' : $q.screen.lt.sm ? '50px' : $q.screen.lt.md ? '100px' : '200px'" :width="$q.screen.lt.xs ? '20px' : $q.screen.lt.sm ? '50px' : $q.screen.lt.md ? '100px' : '100%'" class="rounded-borders shadow-6"></q-img>
                     </q-item>
 
                   </q-item-section>
@@ -66,7 +66,7 @@
             </p>
 
             <div>
-              <q-badge v-for="(tech, i) in currentProject.technologies" :color="pillColors[i]" :key="tech" :label="tech" class="q-mr-sm q-mt-sm q-pa-sm text-weight-bold" />
+              <q-badge v-for="(tech, i) in currentProject.technologies" :color="pillColors[i]" :key="tech" :label="tech" class="q-mr-sm q-mt-sm q-pa-sm text-weight-bold shadow-2" />
             </div>
 
             <p class="text-subtitle2 q-mt-lg">
