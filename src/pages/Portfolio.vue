@@ -7,11 +7,13 @@
 
         <q-drawer
           v-model="drawer"
-          :mini="$q.screen.lt.sm"
-          :width="$q.screen.lt.md ? 175 : 280"
+          :mini="mini"
+          width="280"
+          @mouseover="mini = false"
+          @mouseout="mini = true"
           :mini-width="100"
           :breakpoint="320"
-          class="bg-light-blue-6 text-white q-pt-xl q-mt-xl shadow-4"
+          class="bg-light-blue-5 text-white q-pt-xl q-mt-xl shadow-4"
         >
 
           <q-scroll-area class="fit q-mt-lg">
@@ -24,12 +26,12 @@
 
                   <q-item-section>
 
-                    <q-item v-show="!$q.screen.lt.sm" class="text-subtitle1 text-weight-medium">
+                    <q-item v-show="!mini" class="text-subtitle1 text-weight-medium">
                       {{ project.name }}
                     </q-item>
 
                     <q-item dense>
-                      <q-img :src="project.image" :height="$q.screen.lt.xs ? '20px' : $q.screen.lt.sm ? '50px' : $q.screen.lt.md ? '100px' : '200px'" :width="$q.screen.lt.xs ? '20px' : $q.screen.lt.sm ? '50px' : $q.screen.lt.md ? '100px' : '100%'" class="rounded-borders shadow-6"></q-img>
+                      <q-img :src="project.image" :height="mini ? '50px' :  '200px'" :width="mini ? '50px' :  '100%'" class="rounded-borders shadow-6"></q-img>
                     </q-item>
 
                   </q-item-section>
@@ -164,30 +166,42 @@ export default {
       title: 'Portfolio',
       titleTemplate: title => `${title} - Rogerio's Portfolio`,
     })
+
     const route = useRoute()
+
     let id 
     onMounted(() => {
       id = route.query.project
       if (id) {
+        mini.value = true
         selectedProject.value = +id
         changeProject(id)
       }
     })
+
     const $store = useStore()
+
     const drawer = ref(true)
+    const mini = ref(false)
+
     const { getScrollTarget, setVerticalScrollPosition } = scroll
+
     const changeProject = (pos) => {
       selectedProject.value = pos 
       const target = getScrollTarget()
       setVerticalScrollPosition(target, 230, 300)
     }
+
     const selectedProject = ref(1)
+
     const projects = computed({
       get: () => $store.state.projects.projects,
     })
+
     const currentProject = computed({
       get: () => $store.state.projects.projects[selectedProject.value - 1],
     })
+
     const pillColors = ['red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-blue', 'cyan', 'teal', 'green', 'light-green', 'lime', 'yellow', 'amber', 'orange', 'deep-orange', 'brown', 'grey', 'blue-grey']
 
     return {
@@ -197,7 +211,8 @@ export default {
       currentProject,
       pillColors,
       changeProject,
-      metadata
+      metadata,
+      mini,
     }
   }
 }
