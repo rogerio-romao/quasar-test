@@ -5,12 +5,13 @@
     <p class="q-pl-md text-subtitle1 q-mb-lg text-blue-grey">A selection of some of my best projects. See the portfolio page for a bigger collection of works, and the about page to learn more about me and contact details.</p>
     <q-separator></q-separator>
     <div class="flex wrap justify-center q-pa-md q-gutter-md q-mt-lg card-parent">
-      <q-card class="my-card" v-for="feature in featured" :key="feature.id">
+      <q-card class="my-card non-selectable" v-for="feature in featured" :key="feature.id">
         <q-img :src="feature.image" @click="setBigImage(feature.name, feature.image)" class="cursor-pointer" >
           <q-tooltip 
-            class="bg-light-blue-10 shadow-4"  
+            class="bg-red-13 shadow-4"  
+            :delay="1000"
             transition-show="scale"
-            transition-hide="rotate" 
+            transition-hide="scale" 
             anchor="center middle"
             self="center middle">
               Click for big image
@@ -18,7 +19,7 @@
         </q-img>
 
         <q-card-section>
-          <div class="text-h6 text-light-blue-10 text-weight-bolder">{{feature.name}}</div>
+          <div class="text-h6 text-light-blue-10 text-weight-bolder cursor-pointer title-link" @click="gotoProject(feature.projectRef)">{{feature.name}}</div>
           <div class="text-subtitle2 text-info">{{feature.shortDesc}}</div>
         </q-card-section>
 
@@ -30,7 +31,7 @@
           <q-btn-group>
             <q-btn type="a" target="_blank" :href="feature.source" color="light-blue-12" class="source-btn" size="sm">Source Code</q-btn>
             <q-btn type="a" target="_blank" :href="feature.live" color="light-blue-10" size="sm">View Live</q-btn>
-            <q-btn type="a" :to="{path: '/portfolio', query: {project: feature.projectRef}}" color="light-blue-12" class="more-btn" size="sm">More Info</q-btn>
+            <q-btn type="a" :to="{path: '/portfolio', query: {project: feature.projectRef} }" color="light-blue-12" class="more-btn" size="sm">More Info</q-btn>
           </q-btn-group>
         </q-card-actions>
         
@@ -52,6 +53,7 @@
 
 <script>
 import { defineComponent, computed, ref } from 'vue'
+import { useRouter } from 'vue-router'
 import { useStore } from 'vuex'
 import { useMeta } from 'quasar'
 
@@ -62,6 +64,7 @@ export default {
       titleTemplate: title => `${title} - Rogerio's Portfolio`,
     })
     const $store = useStore()
+    const $router = useRouter()
     const showBigImage = ref(false)
     const currentImage = ref('')
     const currentProject = ref('')
@@ -76,6 +79,14 @@ export default {
     const indexComponent = defineComponent({
       name: 'PageIndex'
     })
+    const gotoProject = (projectRef) => {
+      $router.push({
+        path: '/portfolio',
+        query: {
+          project: projectRef
+        }
+      })
+    }
 
     return {
       indexComponent,
@@ -84,7 +95,8 @@ export default {
       currentImage,
       currentProject,
       setBigImage,
-      metadata
+      metadata,
+      gotoProject
     }
   }
 }
@@ -107,6 +119,10 @@ export default {
 .feature-longDesc
   max-height: calc( 100% - 347px )
   overflow-y: auto
+.title-link
+  &:hover
+    text-decoration: underline
+    color: #0a6064 !important
 @keyframes shake
   from
     transform: translate(0px, 0px)
