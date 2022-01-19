@@ -8,8 +8,8 @@
       <q-card class="my-card non-selectable" v-for="feature in featured" :key="feature.id">
         <q-img :src="feature.image" @click="setBigImage(feature.name, feature.image)" class="cursor-pointer" >
           <q-tooltip 
-            class="bg-red-13 shadow-4"  
-            :delay="1000"
+            class="bg-pink-6 shadow-4"  
+            :delay="800"
             transition-show="scale"
             transition-hide="scale" 
             anchor="center middle"

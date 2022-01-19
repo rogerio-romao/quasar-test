@@ -11,8 +11,11 @@
           :width="$q.screen.lt.sm ? 180 : 280"
           @mouseover="mini = false"
           @mouseout="mini = true"
+          @click="mini = true"
           :mini-width="100"
-          :breakpoint="320"
+          :breakpoint="220"
+          no-swipe-open
+          no-swipe-close
           class="bg-light-blue-5 text-white q-pt-xl q-mt-xl shadow-4"
         >
 

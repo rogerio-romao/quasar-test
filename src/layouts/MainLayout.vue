@@ -18,11 +18,11 @@
       <q-banner class="bg-dark text-white" :inline-actions="$q.screen.gt.xs">
         Welcome to my online portfolio / CV. 
         <template v-slot:action>
-          <q-tabs inline-label dense shrink class="text-light-blue-11" active-color="light-blue-13" >
+          <q-tabs inline-label dense shrink class="text-cyan-13" active-color="light-green" >
             <q-route-tab
               icon="home"
-              to="/"
-              :label="$q.screen.gt.xs ? 'Home' : ''"
+              to="/featured"
+              :label="$q.screen.gt.xs ? 'Featured' : ''"
               exact
             />
             <q-route-tab
