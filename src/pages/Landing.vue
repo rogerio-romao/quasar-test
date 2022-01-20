@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <h4 class="continue" ref="continueRef" @click="goToMain">{{secsLeft}} sec to continue</h4>
-    <div class="heading">
+    <h4 class="continue" ref="continueRef" @click="goToMain">Moving to site in {{3 - secsLeft}}</h4>
+    <div class="heading" ref="heading">
       <h1 ref="header1" class="h1">Welcome to</h1>
       <h1 ref="header2" class="h2">my Portfolio!</h1>
     </div>
@@ -26,9 +26,13 @@
 import { ref, onMounted, reactive } from "vue";
 import { useRouter } from "vue-router";
 import { gsap } from "gsap";
+import { useQuasar } from 'quasar'
+
+const $q = useQuasar()
 
 const router = useRouter();
 
+const heading = ref(null);
 const header1 = ref(null);
 const header2 = ref(null);
 const avatar = ref(null);
@@ -41,7 +45,7 @@ const numProjectsStart = reactive({ val: 0 });
 const numProjectsEnd = 20;
 const numFeaturedStart = reactive({ val: 0 });
 const numFeaturedEnd = 11;
-const secsLeft = ref(5)
+const secsLeft = ref(0)
 
 const goToMain = () => {
   router.push({
@@ -51,8 +55,8 @@ const goToMain = () => {
 
 const startCountdown = () => {
   const interval = setInterval(() => {
-    secsLeft.value--;
-    if (secsLeft.value === 0) {
+    secsLeft.value++;
+    if (secsLeft.value === 3) {
       clearInterval(interval);
       goToMain();
     }
@@ -61,7 +65,14 @@ const startCountdown = () => {
 
 
 onMounted(() => {
-  gsap.set(avatar.value, { autoAlpha: 1, scale: 0, rotate: 2580 });
+  if ($q.platform.is.mobile) {
+    gsap.set(heading.value, { scale: 0.5 })
+     gsap.set(stats1.value, { scale: 0.8 })
+     gsap.set(stats2.value, { scale: 0.8 })
+     gsap.set(stats3.value, { scale: 0.8 })
+     
+  }
+  gsap.set(avatar.value, { autoAlpha: 1, scale: 0, rotate: 780 });
   gsap.set(nome.value, { opacity: 0, y: -20 });
   gsap.set(stats1.value, { opacity: 0, y: "+100" });
   gsap.set(stats2.value, { opacity: 0, y: "+50" });
@@ -136,7 +147,7 @@ onMounted(() => {
         scale: 0.7,
         skewY: 15,
         repeat: 1,
-        repeatDelay: 2,
+        repeatDelay: 0.5,
       },
       "-=0.5"
     )
@@ -182,7 +193,6 @@ h1 {
   margin-right: 16vmin;
 }
 .heading {
-  font-size: 10vmin;
   text-align: center;
   width: 100vw;
 }
