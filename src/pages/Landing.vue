@@ -23,14 +23,17 @@
 </template>
 
 <script setup>
-import { ref, onMounted, reactive } from "vue";
+import { ref, onMounted, reactive, computed } from "vue";
 import { useRouter } from "vue-router";
+import { useStore } from "vuex";
 import { gsap } from "gsap";
 import { useQuasar } from 'quasar'
 
 const $q = useQuasar()
 
-const router = useRouter();
+const $store = useStore()
+
+const $router = useRouter();
 
 const heading = ref(null);
 const header1 = ref(null);
@@ -42,13 +45,13 @@ const stats1 = ref(null);
 const stats2 = ref(null);
 const stats3 = ref(null);
 const numProjectsStart = reactive({ val: 0 });
-const numProjectsEnd = 20;
+const numProjectsEnd = computed(() => $store.state.projects.projects.length);
 const numFeaturedStart = reactive({ val: 0 });
-const numFeaturedEnd = 11;
+const numFeaturedEnd = computed(() => $store.state.featured.featured.length)
 const secsLeft = ref(0)
 
 const goToMain = () => {
-  router.push({
+  $router.push({
       path: "/featured",
     });
 }
@@ -112,7 +115,7 @@ onMounted(() => {
       delay: 1.5,
     })
     .to(numProjectsStart, 1, {
-      val: numProjectsEnd,
+      val: numProjectsEnd.value,
       duration: 2,
       ease: "power1.in",
       roundProps: "val",
@@ -123,7 +126,7 @@ onMounted(() => {
       y: 0,
     })
     .to(numFeaturedStart, 1, {
-      val: numFeaturedEnd,
+      val: numFeaturedEnd.value,
       duration: 2,
       ease: "slow(0.5, 0.4, false)",
       roundProps: "val",
