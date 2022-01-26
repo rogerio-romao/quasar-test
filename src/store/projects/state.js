@@ -495,7 +495,7 @@ export default function () {
         source: "#",
         live: "#",
         longDesc:
-          "My 2.0 portfolio. First time exploring the Quasar UI library. It is Vue3 based, using the composition API, with Vuex handling the data. Went for a streamlined look, and ease of use when editing. Mobile responsive.",
+          "My 2.0 portfolio. First time exploring the Quasar UI library. It is Vue3 based, using the composition API and the new script setup syntax, with Vuex handling the data. Went for a streamlined look, and ease of use when editing. Mobile responsive.",
         showDetails: true,
         details: {
           head: "For the most part, the biggest lessons from this build were how to use the Quasar UI Framework, which is a opinionated, feature packed library for use with Vu3, and using the composition API from Vue3. It is deployed on Vercel with webhooks on GitHub to automatically deploy changes to the website. The UI is very clean and easy to use, and the code is very readable and easy to understand. The UI is also responsive, and looks great on any size screen. Also created a nice custom form that is connected to an email API, and sends me an email when the form is submitted, after succesfully passing the custom validation. And a accordeon component that is used in the about section, to show courses taken.",
@@ -508,6 +508,20 @@ export default function () {
           ],
           body: "I tried to pay a lot of attention to detail. Examples of that include the 'elastic' animation on hover on the cards in the featured page, done with plain CSS animation and keyframes; the transitions between pages with a slight fade-out, that is setup via vue transitions at the vue router level, the auto-hiding of the sidebar on the portfolio page and obviously the landing page which is a full blown programmatic animation using the amazing Gsap library.",
         },
+      },
+      {
+        id: 21,
+        name: "Huddle Website",
+        type: "Front-End",
+        shortDesc:
+          "Frontend Mentor challenge website, with curved sections and responsive layout.",
+        technologies: ["Javascript", "CSS3", "HTML5"],
+        image: require("../../assets/huddle.png"),
+        source: "https://github.com/rogerio-romao/huddle-landing-page",
+        live: "https://rogerio-romao.github.io/huddle-landing-page/",
+        longDesc:
+          "The Frontend Mentor website gives you a full project design image, and you have to replicate it through code, using whatever technologies you are comfortable with. This challenge was to create a landing page website that would be responsive, with some curved sections. It was fun and good practice to follow a design system and translate it to code, I think I nailed this one. First time I used Github Pages for hosting too.",
+        showDetails: false,
       },
     ],
   };
