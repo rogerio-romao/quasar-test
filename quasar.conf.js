@@ -68,6 +68,16 @@ module.exports = configure(function (ctx) {
         chain
           .plugin("eslint-webpack-plugin")
           .use(ESLintPlugin, [{ extensions: ["js", "vue"] }]);
+        chain.module
+          .rule("markdown")
+          .test(/\.md$/)
+          .use("frontmatter-markdown-loader")
+          .loader("frontmatter-markdown-loader")
+          .tap((options) => {
+            return {
+              mode: "vue-component",
+            };
+          });
       },
     },
 
