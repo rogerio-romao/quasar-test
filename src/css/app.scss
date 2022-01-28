@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
+
 // app global css in SCSS form
 :root {
   --animate-duration: 0.65s;
@@ -5,4 +7,32 @@
 
 html {
   background-color: #e2f5fe;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+  color: #e72565;
+}
+
+.post-content p {
+  color: #e8e8e8;
+  font-size: 1.1rem;
+}
+
+.post-content a {
+  color: #3dccea;
+}
+
+.post-content a:hover {
+  color: #3da5ea;
+}
+
+.post-content pre {
+  background-color: #273238;
+  padding: 1rem;
+  font-family: "Inconsolata", monospace;
 }

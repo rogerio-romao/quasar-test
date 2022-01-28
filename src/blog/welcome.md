@@ -5,7 +5,7 @@ tags:
   - musings
 ---
 
-#### Welcome
+### Welcome
 
 I have decided it is time for me to finally start a blog.
 
