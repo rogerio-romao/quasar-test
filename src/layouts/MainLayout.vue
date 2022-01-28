@@ -15,26 +15,32 @@
         </q-avatar>
 
       </q-toolbar>
-      <q-banner class="bg-dark text-white" :inline-actions="$q.screen.gt.xs">
-        Welcome to my online portfolio / CV. 
+      <q-banner class="bg-dark text-white" inline-actions>
+        Welcome to my online portfolio / CV / blog. 
         <template v-slot:action>
           <q-tabs inline-label dense shrink class="text-cyan-13" active-color="light-green" >
             <q-route-tab
               icon="home"
               to="/featured"
-              :label="$q.screen.gt.xs ? 'Featured' : ''"
+              :label="$q.screen.gt.sm ? 'Featured' : ''"
               exact
             />
             <q-route-tab
               icon="folder"
               to="/portfolio"
-              :label="$q.screen.gt.xs ? 'Portfolio' : ''"
+              :label="$q.screen.gt.sm ? 'Portfolio' : ''"
               exact
             />
             <q-route-tab
               icon="info"
               to="/about"
-              :label="$q.screen.gt.xs ? 'About' : ''"
+              :label="$q.screen.gt.sm ? 'About' : ''"
+              exact
+            />
+            <q-route-tab
+              icon="article"
+              to="/blog"
+              :label="$q.screen.gt.sm ? 'Blog' : ''"
               exact
             />
           </q-tabs>

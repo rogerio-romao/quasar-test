@@ -11,6 +11,7 @@
         :label="title"
         default-opened
         header-class="text-primary"
+        class="bg-light-blue-2"
       >
         <q-card dark class="my-card q-pa-lg q-mb-md">
           <q-card-section>
@@ -36,56 +37,20 @@
 
         </q-card>
       </q-expansion-item>
-
-      <q-expansion-item
-        group="somegroup"
-        icon="explore"
-        :label="title2"
-        header-class="text-primary"
-      >
-        <q-card dark class="my-card q-pa-lg">
-          <q-card-section>
-            <span class="text-h6">{{title2}}</span>
-            <span class="text-subtitle2 float-right">{{date2}}</span>
-          </q-card-section>
-
-          <q-separator dark inset />
-
-          <q-card-section>
-            <div v-html="content2"></div>
-          </q-card-section>
-
-          <q-separator dark inset />
-
-          <q-card-section>
-            <div class="pills">
-              <q-chip v-for="tag in tags" :key="tag" outline color="lime" text-color="white">
-                {{tag}}
-              </q-chip>
-            </div>
-          </q-card-section>
-
-        </q-card>
-      </q-expansion-item>
     </q-list>
     
   </q-page>
 </template>
 
 <script>
-import test from '../blog/test.md'
 import welcome from '../blog/welcome.md'
 export default {
   data() {
     return {
-      title: test.attributes.title,
-      date: test.attributes.date,
-      tags: test.attributes.tags,
-      content: test.html,
-      title2: welcome.attributes.title,
-      date2: welcome.attributes.date,
-      tags2: welcome.attributes.tags,
-      content2: welcome.html
+      title: welcome.attributes.title,
+      date: welcome.attributes.date,
+      tags: welcome.attributes.tags,
+      content: welcome.html
     }
   }
 }

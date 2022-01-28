@@ -124,7 +124,7 @@ onMounted(() => {
       opacity: 1,
       color: "#72b8e4",
       y: 0,
-    })
+    }, "-=0.5")
     .to(numFeaturedStart, 1, {
       val: numFeaturedEnd.value,
       duration: 2,
@@ -149,8 +149,6 @@ onMounted(() => {
         y: -48,
         scale: 0.7,
         skewY: 15,
-        repeat: 1,
-        repeatDelay: 0.5,
       },
       "-=0.5"
     )
