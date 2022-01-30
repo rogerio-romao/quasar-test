@@ -49,10 +49,11 @@ import { useMeta } from 'quasar'
 
 import welcome from '../blog/welcome.md'
 import gsap from '../blog/gsap.md'
+import googling from '../blog/googling.md'
 export default {
   data() {
     return {
-      posts: [welcome, gsap].sort((a, b) => {
+      posts: [welcome, gsap, googling].sort((a, b) => {
         return new Date(a.attributes.date) < new Date(b.attributes.date) ? 1 : -1
       }),
     }

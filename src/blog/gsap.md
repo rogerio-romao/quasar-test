@@ -22,7 +22,7 @@ This library's documentation should be the gold standard. So many times the docs
 
 Gsap are having none of that, and everything is explained in very clear language, with code examples that all make sense, and as a final bonus, there are plenty of (extremely well done) videos! If we could have this level of documentation around frequently, lots of headaches would be avoided. Major kudos to Gsap.
 
-Also, their website showcases what they are about, with lots of small details and animations. [Have a look at their docs here](https://greensock.com/docs/)
+Also, their website showcases what they are about, with lots of small details and animations. [Have a look at their docs here](https://greensock.com/docs/). There is also a nice [free course over at Creative Coding](https://www.creativecodingclub.com/bundles/creative-coding-club).
 
 ##### API
 
