@@ -75,7 +75,7 @@ onMounted(() => {
      gsap.set(stats3.value, { scale: 0.8 })
      
   }
-  gsap.set(avatar.value, { autoAlpha: 1, scale: 0, rotate: 780 });
+  gsap.set(avatar.value, { autoAlpha: 1, scale: 0, rotate: 540 });
   gsap.set(nome.value, { opacity: 0, y: -20 });
   gsap.set(stats1.value, { opacity: 0, y: "+100" });
   gsap.set(stats2.value, { opacity: 0, y: "+50" });

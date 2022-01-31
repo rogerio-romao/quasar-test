@@ -8,7 +8,7 @@
       <q-expansion-item
         v-for="(post, index) in posts"
         group="somegroup"
-        icon="explore"
+        icon="description"
         :label="post.attributes.title"
         :default-opened="index === 0"
         header-class="text-primary"
