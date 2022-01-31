@@ -106,13 +106,12 @@ onMounted(() => {
       y: -48,
       rotate: 0,
       scale: 1,
-      delay: 0.25,
-      duration: 1.2,
+      duration: 1,
     })
     .to(stats1.value, {
       opacity: 1,
       y: 0,
-      delay: 1.5,
+      delay: 1.2,
     })
     .to(numProjectsStart, 1, {
       val: numProjectsEnd.value,
@@ -136,8 +135,8 @@ onMounted(() => {
       color: "#c93926",
       x: 0,
       y: 0,
-      delay: 0.5,
-      duration: 3,
+      delay: 0.2,
+      duration: 2.5,
     })
     .to(
       nome.value,
@@ -156,7 +155,7 @@ onMounted(() => {
       opacity: 1,
       color: "#c9b626",
       y: 0,
-      delay: 1.3,
+      delay: 1,
     });
 });
 </script>
