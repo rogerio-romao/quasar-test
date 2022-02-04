@@ -24,4 +24,14 @@ This website features a large amount of guides and courses, from basic HTML to R
 This Mozilla documentation site is like the bible of web development, and something to be consulted almost daily when working. It's got guides and most of all reference documentation on every Javascript method, HTML element, CSS rule etc.
 [Go to MDN](https://developer.mozilla.org/)
 
+Other alternatives to these two are W3Schools and GeeksForGeeks, but I don't find them as good.
+
+The rest in this category are more of the code challenges / competitive coding category, which are fun but also very instructive and they make you think a lot about problem solving.
+
+**Codewars**
+Pretty cool interface, you can choose from easy problems (called katas on this website), to very hard ones, and you can try to solve them in a wide variety of languages. [Go to Codewars](https://www.codewars.com/)
+
+**Edabit**
+Very similar to the above, maybe with more beginner friendly challenges. [Go to Edabit](https://edabit.com/challenges)
+
 ##### Paid Websites
