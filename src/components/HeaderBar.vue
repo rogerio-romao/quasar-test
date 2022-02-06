@@ -39,3 +39,17 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.avatar:hover {
+  animation: rotate 500ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+</style>
