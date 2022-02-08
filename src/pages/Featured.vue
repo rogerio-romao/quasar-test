@@ -84,13 +84,6 @@ export default {
   setup() {
     const metadata = useMeta({
       title: 'Featured Projects',
-      link: {
-        favicon: {
-          rel: 'icon',
-          type: 'image/ico',
-          href: 'favicon.ico',
-        }
-      },
       titleTemplate: title => `${title} - Rogerio's Portfolio`,
     })
     const $store = useStore()

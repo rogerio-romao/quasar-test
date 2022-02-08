@@ -7,22 +7,8 @@
 </template>
 <script>
 import { defineComponent, Component } from 'vue';
-import { useMeta } from 'quasar'
+
 export default defineComponent({
   name: 'App',
-  setup() {
-    const metadata = useMeta({
-      link: {
-        favicon: {
-          rel: 'icon',
-          type: 'image/ico',
-          href: 'favicon.ico',
-        }
-      },
-    })
-    return {
-      metadata
-    }
-  }
 })
 </script>
