@@ -1,17 +1,12 @@
 <template>
   <div class="container">
-    <h4 class="continue" ref="continueRef" @click="goToMain">Moving to site in {{3 - secsLeft}}</h4>
+    <h4 class="continue" ref="continueRef" @click="goToMain">Moving to site in {{ 3 - secsLeft }}</h4>
     <div class="heading" ref="heading">
       <h1 ref="header1" class="h1">Welcome to</h1>
       <h1 ref="header2" class="h2">my Portfolio!</h1>
     </div>
     <div id="image-wrapper">
-      <img
-        src="../assets/rogerio_avatar.png"
-        alt="rogerio"
-        class="avatar"
-        ref="avatar"
-      />
+      <img src="../assets/rogerio_avatar.png" alt="rogerio" class="avatar" ref="avatar" />
     </div>
     <div class="nome" ref="nome">Rogerio →</div>
     <div class="stats">
@@ -27,7 +22,7 @@ import { ref, onMounted, reactive, computed } from "vue";
 import { useRouter } from "vue-router";
 import { useStore } from "vuex";
 import { gsap } from "gsap";
-import { useQuasar } from 'quasar'
+import { useQuasar, useMeta } from 'quasar'
 
 const $q = useQuasar()
 
@@ -50,10 +45,15 @@ const numFeaturedStart = reactive({ val: 0 });
 const numFeaturedEnd = computed(() => $store.state.featured.featured.length)
 const secsLeft = ref(0)
 
+const metadata = useMeta({
+  title: 'Welcome',
+  titleTemplate: title => `${title} - Rogerio's Portfolio`,
+})
+
 const goToMain = () => {
   $router.push({
-      path: "/featured",
-    });
+    path: "/featured",
+  });
 }
 
 const startCountdown = () => {
@@ -64,16 +64,16 @@ const startCountdown = () => {
       goToMain();
     }
   }, 1000);
-} 
+}
 
 
 onMounted(() => {
   if ($q.platform.is.mobile) {
     gsap.set(heading.value, { scale: 0.5 })
-     gsap.set(stats1.value, { scale: 0.8 })
-     gsap.set(stats2.value, { scale: 0.8 })
-     gsap.set(stats3.value, { scale: 0.8 })
-     
+    gsap.set(stats1.value, { scale: 0.8 })
+    gsap.set(stats2.value, { scale: 0.8 })
+    gsap.set(stats3.value, { scale: 0.8 })
+
   }
   gsap.set(avatar.value, { autoAlpha: 1, scale: 0, rotate: 540 });
   gsap.set(nome.value, { opacity: 0, y: -20 });
