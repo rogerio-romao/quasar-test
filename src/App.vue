@@ -13,9 +13,11 @@ export default defineComponent({
   setup() {
     const metadata = useMeta({
       link: {
-        rel: 'icon',
-        type: 'image/ico',
-        href: 'favicon.ico',
+        favicon: {
+          rel: 'icon',
+          type: 'image/ico',
+          href: 'favicon.ico',
+        }
       },
     })
     return {
