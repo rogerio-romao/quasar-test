@@ -101,7 +101,7 @@ onMounted(() => {
     })
     .to(avatar.value, {
       opacity: 1,
-      ease: "bounce(6)",
+      ease: "bounce(4)",
       x: 48,
       y: -48,
       rotate: 0,
@@ -111,7 +111,7 @@ onMounted(() => {
     .to(stats1.value, {
       opacity: 1,
       y: 0,
-      delay: 1.2,
+      delay: 1,
     })
     .to(numProjectsStart, 1, {
       val: numProjectsEnd.value,
@@ -136,13 +136,13 @@ onMounted(() => {
       x: 0,
       y: 0,
       delay: 0.2,
-      duration: 2.5,
+      duration: 2,
     })
     .to(
       nome.value,
       {
         opacity: 1,
-        color: "#29c9b6",
+        color: "#8c0",
         ease: "bounce.out",
         x: 48,
         y: -48,
@@ -153,9 +153,9 @@ onMounted(() => {
     )
     .to(continueRef.value, {
       opacity: 1,
-      color: "#c9b626",
+      color: "#fff",
       y: 0,
-      delay: 1,
+      delay: .5,
     });
 });
 </script>
