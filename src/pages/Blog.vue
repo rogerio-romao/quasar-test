@@ -11,20 +11,20 @@
         label="all"
         outline
         rounded
-        color="primary"
+        color="red"
         text-color="dark"
-        class="q-mr-sm q-px-sm q-py-xs tags"
+        class="q-mr-sm q-px-md q-py-xs tags shadow-1 text-weight-bold"
         @click="tagFilter = 'all'"
       />
       <q-badge
-        v-for="tag in allTags"
+        v-for="(tag, i) in allTags"
         :key="tag"
         :label="tag"
         outline
         rounded
-        color="primary"
+        :color="pillColors[i]"
         text-color="dark"
-        class="q-mr-sm q-px-sm q-py-xs tags"
+        class="q-mr-sm q-px-sm q-py-xs tags shadow-1 text-weight-bold"
         @click="tagFilter = tag"
       />
     </div>
@@ -103,17 +103,20 @@ export default {
     })
 
     const allTags = computed(() => {
-      return new Set(posts.reduce((acc, post) => {
+      return [...new Set(posts.reduce((acc, post) => {
         return acc.concat(post.attributes.tags)
-      }, []))
+      }, []))]
     })
+
+    const pillColors = ['pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-blue', 'cyan', 'teal', 'green', 'light-green', 'lime', 'yellow', 'amber', 'orange', 'deep-orange', 'brown', 'grey', 'blue-grey']
 
     return {
       metadata,
       posts,
       tagFilter,
       filteredPosts,
-      allTags
+      allTags,
+      pillColors,
     }
   }
 }
@@ -122,9 +125,11 @@ export default {
 <style scoped>
 .tags {
   text-transform: capitalize;
+  transition: box-shadow 0.1s ease-in-out;
   cursor: pointer;
 }
 .tags:hover {
-  text-decoration: underline;
+  font-weight: 900;
+  box-shadow: none;
 }
 </style>
