@@ -1,18 +1,14 @@
 <template>
-  <div class="q-pa-md row items-start q-gutter-md">
-    <q-card class="my-card" flat bordered>
+  <div class="q-pa-md row items-start full-width q-gutter-md">
+    <q-card class="my-card full-width" flat bordered>
       <q-form @submit="onSubmit" ref="msgForm">
         <q-card-section horizontal>
-          <q-card-section class="q-pt-xs">
+          <q-card-section class="q-pt-xs full-width">
             <div class="text-overline">About Me</div>
             <div class="text-h5 q-mt-sm q-mb-xs">Rogerio Romao</div>
-            <div
-              class="text-caption text-grey"
-            >Intelligent, hard-working, takes pride in quality of work, enjoys learning new skills and does it fast. Experience in managing and leading teams, administrative work, and excellent IT skills. A trusted and valued asset for your company.</div>
+            <div class="text-caption text-grey">Full-Stack Developer working @ Calashock.</div>
             <div class="text-overline">Location:</div>
-            <div
-              class="text-caption text-grey"
-            >London. Available for remote work. Relocation considered.</div>
+            <div class="text-caption text-grey">London.</div>
             <div class="text-overline">Get In Touch:</div>
             <div class="q-gutter-md" style="max-width: 600px">
               <q-input
