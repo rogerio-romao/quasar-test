@@ -3,6 +3,17 @@ export default function () {
     featured: [
       {
         id: 1,
+        projectRef: 22,
+        name: "Color Palette Creator",
+        image: require("../../assets/palette.png"),
+        shortDesc: "Create color schemes and export them to use on your app.",
+        longDesc:
+          "This uses Vue3 and Vuex. It allows you to create color schemes and export them as CSS to use on your app. You set a main color, and it generates a bunch of variations of that color based on color theory. You can then pick variations and edit them to create a new color scheme, or have the app generate a random scheme for you with those variations. You can login and save your color schemes to your account.",
+        source: "https://github.com/rogerio-romao/pallete-creator",
+        live: "https://palette-creator.surge.sh/",
+      },
+      {
+        id: 2,
         projectRef: 17,
         name: "React Realtime Chat App",
         image: require("../../assets/chat.png"),
@@ -13,7 +24,7 @@ export default function () {
         live: "https://react-chat-app-fca7d.web.app/",
       },
       {
-        id: 2,
+        id: 3,
         projectRef: 20,
         name: "Online Portfolio/CV V2",
         image: require("../../assets/portfoliov2.png"),
@@ -24,7 +35,7 @@ export default function () {
         live: "https://portfolio-v2-puce-theta.vercel.app/",
       },
       {
-        id: 3,
+        id: 4,
         projectRef: 19,
         name: "Idle DJ Game",
         image: require("../../assets/idle-dj.png"),
@@ -35,7 +46,7 @@ export default function () {
         live: "https://silly-lamport-fbfed0.netlify.app/",
       },
       {
-        id: 4,
+        id: 5,
         projectRef: 8,
         name: "The Spiral",
         image: require("../../assets/spiral.png"),
@@ -46,7 +57,7 @@ export default function () {
         live: "https://codepen.io/rogerio-romao/full/mdevOwm",
       },
       {
-        id: 5,
+        id: 6,
         projectRef: 18,
         name: "Netflix Clone",
         image: require("../../assets/netflix-clone.png"),
@@ -57,7 +68,7 @@ export default function () {
         live: "https://netflix-clone-f2569.web.app/",
       },
       {
-        id: 6,
+        id: 7,
         projectRef: 11,
         name: "Music Player",
         image: require("../../assets/music-player.png"),
@@ -68,7 +79,7 @@ export default function () {
         live: "https://codepen.io/rogerio-romao/full/vYNvBzd",
       },
       {
-        id: 7,
+        id: 8,
         projectRef: 10,
         name: "The Randomizer",
         image: require("../../assets/randomizer.png"),
@@ -80,7 +91,7 @@ export default function () {
         live: "https://codepen.io/rogerio-romao/full/Baoqvmm",
       },
       {
-        id: 8,
+        id: 9,
         projectRef: 1,
         name: "Converse",
         image: require("../../assets/converse.png"),
@@ -91,7 +102,7 @@ export default function () {
         live: "https://codepen.io/rogerio-romao/full/RwPaaRR",
       },
       {
-        id: 9,
+        id: 10,
         projectRef: 6,
         name: "Guess The Number",
         image: require("../../assets/guess-number.png"),
@@ -102,7 +113,7 @@ export default function () {
         live: "https://codepen.io/rogerio-romao/full/XWbQbbN",
       },
       {
-        id: 10,
+        id: 11,
         projectRef: 9,
         name: "Game of Life",
         image: require("../../assets/gol.png"),
@@ -113,7 +124,7 @@ export default function () {
         live: "https://codepen.io/rogerio-romao/full/VwvbdZE",
       },
       {
-        id: 11,
+        id: 12,
         projectRef: 13,
         name: "Online Portfolio/CV",
         image: require("../../assets/portfolio.png"),

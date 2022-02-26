@@ -523,6 +523,27 @@ export default function () {
           "The Frontend Mentor website gives you a full project design image, and you have to replicate it through code, using whatever technologies you are comfortable with. This challenge was to create a landing page website that would be responsive, with some curved sections. It was fun and good practice to follow a design system and translate it to code, I think I nailed this one. First time I used Github Pages for hosting too.",
         showDetails: false,
       },
+      {
+        id: 22,
+        name: "Color Palette Creator",
+        type: "Front-End",
+        shortDesc: "Create color schemes and export them to use on your app.",
+        technologies: [
+          "Javascript",
+          "CSS3",
+          "HTML5",
+          "Vue3",
+          "Vuex",
+          "Firebase",
+          "Authentication",
+        ],
+        image: require("../../assets/palette.png"),
+        source: "https://github.com/rogerio-romao/pallete-creator",
+        live: "https://palette-creator.surge.sh/",
+        longDesc:
+          "This uses Vue3 and Vuex. It allows you to create color schemes and export them as CSS to use on your app. You set a main color, and it generates a bunch of variations of that color based on color theory. You can then pick variations and edit them to create a new color scheme, or have the app generate a random scheme for you with those variations. You can login and save your color schemes to your account.",
+        showDetails: false,
+      },
     ],
   };
 }
