@@ -16,7 +16,7 @@
   "dependencies": {
     "@quasar/extras": "^1.16.9",
     "@vue/component-compiler-utils": "^3.3.0",
-    "core-js": "^3.33.3",
+    "core-js": "^3.36.1",
     "emailjs-com": "^3.2.0",
     "frontmatter-markdown-loader": "^3.7.0",
     "gsap": "^3.12.4",
