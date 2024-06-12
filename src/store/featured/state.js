@@ -13,17 +13,6 @@ export default function () {
         live: "https://palette-creator.surge.sh/",
       },
       {
-        id: 2,
-        projectRef: 17,
-        name: "React Realtime Chat App",
-        image: require("../../assets/chat.png"),
-        shortDesc: "A realtime chat application a la Whatsapp.",
-        longDesc:
-          "This is a React application that uses Firebase for the backend. I am using Realtime Database, Authentication, Storage, Hosting and Functions. The app is using the latest React syntax, with Hooks, including custom hooks, for things like api calls, media queries and modal windows. Uses the Notification api to send messages to users and RSuite UI library.",
-        source: "https://github.com/rogerio-romao/react-chat-app",
-        live: "https://react-chat-app-fca7d.web.app/",
-      },
-      {
         id: 3,
         projectRef: 20,
         name: "Online Portfolio/CV V2",
@@ -55,17 +44,6 @@ export default function () {
           "Very proud of this one, programmed from scratch, pushing the envelope with animation and canvas, custom functions including a stagger using requestanimationframe, and a custom music player. Won a Codepen Pick! Also works as a standalone desktop app, planning to have this for sale in App Store.",
         source: "https://codepen.io/rogerio-romao/pen/mdevOwm",
         live: "https://codepen.io/rogerio-romao/full/mdevOwm",
-      },
-      {
-        id: 6,
-        projectRef: 18,
-        name: "Netflix Clone",
-        image: require("../../assets/netflix-clone.png"),
-        shortDesc: "Netflix clone using TMDB API with movie trailer previews.",
-        longDesc:
-          "This is a React application that is hosted on Firebase, done using Hooks and functional components. The data is coming from the TMDB API, and each title can be clicked to watch a movie preview.",
-        source: "https://github.com/rogerio-romao/netflix-clone-react",
-        live: "https://netflix-clone-f2569.web.app/",
       },
       {
         id: 7,
@@ -122,17 +100,6 @@ export default function () {
           "This was an entry for a Game of Life challenge in Codepen. Programmed a version of the classic game of life, with a feature to draw your own patterns, and learned a lot while doing so!",
         source: "https://codepen.io/rogerio-romao/pen/VwvbdZE",
         live: "https://codepen.io/rogerio-romao/full/VwvbdZE",
-      },
-      {
-        id: 12,
-        projectRef: 13,
-        name: "Online Portfolio/CV",
-        image: require("../../assets/portfolio.png"),
-        shortDesc: "My online portfolio / CV website",
-        longDesc:
-          "Older iteration of this website. Uses Vue as the framework with heavy use of Vuex for the state (separate modules for each component), with bespoke components for every section of the app and clear separation of concerns between data and presentation, where Tailwind is used for most CSS. Deployed on Netlify via Github integration.",
-        source: "https://github.com/rogerio-romao/rogerio",
-        live: "https://wonderful-keller-3363b3.netlify.app/",
       },
     ],
   };

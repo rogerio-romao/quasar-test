@@ -1,12 +1,6 @@
-import Landing from "../pages/Landing.vue";
-
 const routes = [
   {
     path: "/",
-    component: Landing,
-  },
-  {
-    path: "/featured",
     component: () => import("layouts/MainLayout.vue"),
     children: [{ path: "", component: () => import("src/pages/Featured.vue") }],
   },

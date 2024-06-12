@@ -28,7 +28,7 @@
         >
           <q-route-tab
             icon="home"
-            to="/featured"
+            to="/"
             :label="$q.screen.gt.sm ? 'Featured' : ''"
             exact
           />
