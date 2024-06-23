@@ -151,7 +151,7 @@ export default {
 <style lang="sass" scoped>
 .my-card
   flex: 1
-  min-height: 550px
+  min-height: 570px
   min-width: 300px
   width: 100%
   max-width: 400px
@@ -163,7 +163,7 @@ export default {
     box-shadow: 0px 0px 7px 2px #2278cf45
     animation: 0.19s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s 1 shake
 .feature-longDesc
-  max-height: calc( 100% - 347px )
+  max-height: calc( 100% - 327px )
   overflow-y: auto
 .title-link
   &:hover

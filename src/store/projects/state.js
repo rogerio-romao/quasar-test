@@ -544,6 +544,37 @@ export default function () {
           "This uses Vue3 and Vuex. It allows you to create color schemes and export them as CSS to use on your app. You set a main color, and it generates a bunch of variations of that color based on color theory. You can then pick variations and edit them to create a new color scheme, or have the app generate a random scheme for you with those variations. You can login and save your color schemes to your account.",
         showDetails: false,
       },
+      {
+        id: 23,
+        name: "Tchef - NPM package",
+        type: "Back-End",
+        shortDesc:
+          "A NPM package that wraps the fetch API, and adds lots of useful features.",
+        technologies: [
+          "Typescript",
+          "ESBuild",
+          "NPM",
+          "JSR",
+          "Javascript",
+          "ESLint",
+          "Vitest",
+        ],
+        image: require("../../assets/tchef.png"),
+        source: "https://github.com/rogerio-romao/tchef",
+        live: "https://www.npmjs.com/package/tchef",
+        longDesc:
+          "This is a NPM package that wraps the fetch API, and adds lots of useful features. It adds result type returns, so no more try-catch, typed responses, and retries among other things. These are features that I found myself writing over and over again, so I decided to make a package out of it. It is written in Typescript, and has a full test suite.",
+        showDetails: true,
+        details: {
+          head: "I have made it for my own personal use, because at my work I am constantly writing fetch functions to grab data, and it got tiresome to do try-catch blocks all the time, and having to check for errors even in the try block. I also wanted the ability to have retries in case of error and to type the responses, so this package is the result of that. It is written in Typescript, and has a full Vitest test suite, and is linted with ESLint with my own custom rules preset. It is also built with ESBuild, which is a very fast bundler. The package is published on NPM and JSR, and you can install it with npm install tchef. It works on the browser and on Node, Deno, Bun, Cloudflare Works.",
+          images1: [
+            require("../../assets/tchef-details1.png"),
+            require("../../assets/tchef-details2.png"),
+            require("../../assets/tchef-details3.png"),
+          ],
+          body: "Tchef returns a result object with the data, status, and error, so you can check for errors in the catch block, and the data is always in the data property. It also has a retry feature, where you can set the number of retries and the delay between them. It also has a timeout feature, where you can set the time in milliseconds to wait for a response before timing out. It also has a typed response, where you can set the type of the response, and it will return the data in that type. It also has a custom headers feature, where you can set the headers you want to send with the request. There is also a retries feature, where you can set the number of retries and the delay between them. It's also possible to use Valibot, a validation library, to validate the response data. The package exports its types and JSDocs, so you get full intellisense in your editor.",
+        },
+      },
     ],
   };
 }

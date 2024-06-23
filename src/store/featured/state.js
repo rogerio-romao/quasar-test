@@ -2,6 +2,18 @@ export default function () {
   return {
     featured: [
       {
+        id: 2,
+        projectRef: 23,
+        name: "Tchef - NPM package",
+        image: require("../../assets/tchef.png"),
+        shortDesc:
+          "A NPM package that wraps the fetch API, and adds lots of useful features.",
+        longDesc:
+          "This is a NPM package that wraps the fetch API, and adds lots of useful features. It adds result type returns, so no more try-catch, typed responses, and retries among other things. These are features that I found myself writing over and over again, so I decided to make a package out of it. It is written in Typescript, and has a full test suite.",
+        source: "https://github.com/rogerio-romao/tchef",
+        live: "https://www.npmjs.com/package/tchef",
+      },
+      {
         id: 1,
         projectRef: 22,
         name: "Color Palette Creator",
