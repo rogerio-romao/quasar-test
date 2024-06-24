@@ -2,7 +2,7 @@ export default function () {
   return {
     featured: [
       {
-        id: 2,
+        id: 1,
         projectRef: 23,
         name: "Tchef - NPM package",
         image: require("../../assets/tchef.png"),
@@ -14,7 +14,18 @@ export default function () {
         live: "https://www.npmjs.com/package/tchef",
       },
       {
-        id: 1,
+        id: 2,
+        projectRef: 24,
+        name: "Typescript Backend Starter",
+        image: require("../../assets/typescript.png"),
+        shortDesc: "My Typescript backend starter template.",
+        longDesc:
+          "Boilerplate code takes an imense amount of time, and it's easy to forget important things. I built this template to be a starting point for my backend projects at work. It uses Typescript, bundling via ESBuild, my own custom ESLint preset, test ready with Vitest, and Consola for logging. Using the new watch mode in Node, and setup as a template in Github, it's easy to get started with a new project.",
+        source: "https://github.com/rogerio-romao/typescript-backend-starter",
+        live: "https://github.com/rogerio-romao/typescript-backend-starter",
+      },
+      {
+        id: 3,
         projectRef: 22,
         name: "Color Palette Creator",
         image: require("../../assets/palette.png"),
@@ -25,7 +36,7 @@ export default function () {
         live: "https://palette-creator.surge.sh/",
       },
       {
-        id: 3,
+        id: 4,
         projectRef: 20,
         name: "Online Portfolio/CV V2",
         image: require("../../assets/portfoliov2.png"),
@@ -34,17 +45,6 @@ export default function () {
           "My 2.0 portfolio. First time exploring the Quasar UI library. It is Vue3 based, using the composition API, with Vuex handling the data. Went for a streamlined look, and ease of use when editing. Mobile responsive. ",
         source: "https://github.com/rogerio-romao/quasar-test",
         live: "https://portfolio-v2-puce-theta.vercel.app/",
-      },
-      {
-        id: 4,
-        projectRef: 19,
-        name: "Idle DJ Game",
-        image: require("../../assets/idle-dj.png"),
-        shortDesc: "Idle / clicker game made with Vue and Vuex.",
-        longDesc:
-          "Still a work in progress, the idea here, was to experiment using Vuex to the full capacity. There is a tremendous amount of state and inter-dependencies, extensive use of modules, actions and mutations.",
-        source: "https://github.com/rogerio-romao/idle_dj",
-        live: "https://silly-lamport-fbfed0.netlify.app/",
       },
       {
         id: 5,
@@ -58,7 +58,7 @@ export default function () {
         live: "https://codepen.io/rogerio-romao/full/mdevOwm",
       },
       {
-        id: 7,
+        id: 6,
         projectRef: 11,
         name: "Music Player",
         image: require("../../assets/music-player.png"),
@@ -69,19 +69,7 @@ export default function () {
         live: "https://codepen.io/rogerio-romao/full/vYNvBzd",
       },
       {
-        id: 8,
-        projectRef: 10,
-        name: "The Randomizer",
-        image: require("../../assets/randomizer.png"),
-        shortDesc:
-          "An app that gives you a random value on different categories.",
-        longDesc:
-          "This is an app that has several categories like countries, colors, number, music keys etc, and the app will get a random value from them. App built in VueJS with Vuetify for the interface, and using a couple of API's for some of the categories.",
-        source: "https://codepen.io/rogerio-romao/pen/Baoqvmm",
-        live: "https://codepen.io/rogerio-romao/full/Baoqvmm",
-      },
-      {
-        id: 9,
+        id: 7,
         projectRef: 1,
         name: "Converse",
         image: require("../../assets/converse.png"),
@@ -92,7 +80,7 @@ export default function () {
         live: "https://codepen.io/rogerio-romao/full/RwPaaRR",
       },
       {
-        id: 10,
+        id: 8,
         projectRef: 6,
         name: "Guess The Number",
         image: require("../../assets/guess-number.png"),
@@ -101,17 +89,6 @@ export default function () {
           "My take on the common programming challenge of Guess the Number game. I tried to make it into as polished an app as possible - attention to details, a nice visualizer pattern for the guesses, automatic adjustment of the maximum guesses determined by the max number chosen by the user and a nice interface.",
         source: "https://codepen.io/rogerio-romao/pen/XWbQbbN",
         live: "https://codepen.io/rogerio-romao/full/XWbQbbN",
-      },
-      {
-        id: 11,
-        projectRef: 9,
-        name: "Game of Life",
-        image: require("../../assets/gol.png"),
-        shortDesc: "My version of the classic Conway's Game of Life.",
-        longDesc:
-          "This was an entry for a Game of Life challenge in Codepen. Programmed a version of the classic game of life, with a feature to draw your own patterns, and learned a lot while doing so!",
-        source: "https://codepen.io/rogerio-romao/pen/VwvbdZE",
-        live: "https://codepen.io/rogerio-romao/full/VwvbdZE",
       },
     ],
   };

@@ -575,6 +575,26 @@ export default function () {
           body: "Tchef returns a result object with the data, status, and error, so you can check for errors in the catch block, and the data is always in the data property. It also has a retry feature, where you can set the number of retries and the delay between them. It also has a timeout feature, where you can set the time in milliseconds to wait for a response before timing out. It also has a typed response, where you can set the type of the response, and it will return the data in that type. It also has a custom headers feature, where you can set the headers you want to send with the request. There is also a retries feature, where you can set the number of retries and the delay between them. It's also possible to use Valibot, a validation library, to validate the response data. The package exports its types and JSDocs, so you get full intellisense in your editor.",
         },
       },
+      {
+        id: 24,
+        name: "Typescript Backend Starter",
+        type: "Back-End",
+        shortDesc: "My Typescript backend starter template.",
+        technologies: [
+          "Typescript",
+          "ESBuild",
+          "ESLint",
+          "Vitest",
+          "Node",
+          "Github",
+        ],
+        image: require("../../assets/typescript.png"),
+        source: "https://github.com/rogerio-romao/typescript-backend-starter",
+        live: "https://github.com/rogerio-romao/typescript-backend-starter",
+        longDesc:
+          "Boilerplate code takes an imense amount of time, and it's easy to forget important things. I built this template to be a starting point for my backend projects at work. It uses Typescript, bundling via ESBuild, my own custom ESLint preset, test ready with Vitest, and Consola for logging. Using the new watch mode in Node, and setup as a template in Github, it's easy to get started with a new project.",
+        showDetails: false,
+      },
     ],
   };
 }
