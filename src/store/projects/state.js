@@ -592,8 +592,37 @@ export default function () {
         source: "https://github.com/rogerio-romao/typescript-backend-starter",
         live: "https://github.com/rogerio-romao/typescript-backend-starter",
         longDesc:
-          "Boilerplate code takes an imense amount of time, and it's easy to forget important things. I built this template to be a starting point for my backend projects at work. It uses Typescript, bundling via ESBuild, my own custom ESLint preset, test ready with Vitest, and Consola for logging. Using the new watch mode in Node, and setup as a template in Github, it's easy to get started with a new project.",
+          "Boilerplate code takes an imense amount of time, and it's easy to forget important things. I built this template to be a starting point for my backend projects at work. It uses Typescript, bundling via ESBuild, my own custom ESLint preset, test ready with Vitest, CI enabled and Consola for logging. Using the new watch mode in Node, and setup as a template in Github, it's easy to get started with a new project.",
         showDetails: false,
+      },
+      {
+        id: 25,
+        name: "Davidoff US Store Locator",
+        type: "Full-Stack",
+        shortDesc: "A store locator for the Davidoff brand's US webstore.",
+        technologies: [
+          "Nextjs 14",
+          "Geolocation",
+          "Google Maps API",
+          "Supabase",
+          "Javascript",
+          "CSS3",
+          "HTML5",
+        ],
+        image: require("../../assets/davidoff-store-locator.png"),
+        source: "#",
+        live: "https://us.davidoffgeneva.com/store-locator",
+        longDesc:
+          "This is the store locator for the Davidoff brand's US webstore. I coded both the backend and frontend. It uses Nextjs 14 with the App Router, and the Geolocation API to get the user's location, and the Google Maps API to show the stores. It is responsive and works on any device. Data is stored in Supabase. Search works by inputting a city or zip code, then calculating the distance to the stores and showing the closest ones first.",
+        showDetails: true,
+        details: {
+          head: "Notable features are: accessibility, with things like autofocus on search, and pressing Enter to submit. You can use the text input or the geolocation button to get the user's location. If using the text input, we use the Google Maps API to get the coordinates of the city or zip code. We then call Supabase to get all the stores, and we calculate distances locally with our own function. This makes it extremely fast. We then sort the stores by distance and show a card with information for each.",
+          images1: [
+            require("../../assets/davidoff-store-locator-details1.png"),
+            require("../../assets/davidoff-store-locator-details2.png"),
+          ],
+          body: "You can then filter the results by type of store. If you are logged in, you also have the ability to save your preferred store to your account. There is on each card a Show on Map button that will take you to Google Maps with the directions to that store from your location. All the css and layout is custom css, using css modules. Also pagination is built from scratch with no dependencies.",
+        },
       },
     ],
   };

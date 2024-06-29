@@ -20,12 +20,23 @@ export default function () {
         image: require("../../assets/typescript.png"),
         shortDesc: "My Typescript backend starter template.",
         longDesc:
-          "Boilerplate code takes an imense amount of time, and it's easy to forget important things. I built this template to be a starting point for my backend projects at work. It uses Typescript, bundling via ESBuild, my own custom ESLint preset, test ready with Vitest, and Consola for logging. Using the new watch mode in Node, and setup as a template in Github, it's easy to get started with a new project.",
+          "Boilerplate code takes an imense amount of time, and it's easy to forget important things. I built this template to be a starting point for my backend projects at work. It uses Typescript, bundling via ESBuild, my own custom ESLint preset, test ready with Vitest, CI enabled and Consola for logging. Using the new watch mode in Node, and setup as a template in Github, it's easy to get started with a new project.",
         source: "https://github.com/rogerio-romao/typescript-backend-starter",
         live: "https://github.com/rogerio-romao/typescript-backend-starter",
       },
       {
         id: 3,
+        projectRef: 25,
+        name: "Davidoff US Store Locator",
+        image: require("../../assets/davidoff-store-locator.png"),
+        shortDesc: "A store locator for the Davidoff brand's US webstore.",
+        longDesc:
+          "This is the store locator for the Davidoff brand's US webstore. I coded both the backend and frontend. It uses Nextjs 14 with the App Router, and the Geolocation API to get the user's location, and the Google Maps API to show the stores. It is responsive and works on any device. Data is stored in Supabase. Search works by inputting a city or zip code, then calculating the distance to the stores and showing the closest ones first.",
+        source: "#",
+        live: "https://us.davidoffgeneva.com/store-locator",
+      },
+      {
+        id: 4,
         projectRef: 22,
         name: "Color Palette Creator",
         image: require("../../assets/palette.png"),
@@ -36,7 +47,7 @@ export default function () {
         live: "https://palette-creator.surge.sh/",
       },
       {
-        id: 4,
+        id: 5,
         projectRef: 20,
         name: "Online Portfolio/CV V2",
         image: require("../../assets/portfoliov2.png"),
@@ -47,7 +58,7 @@ export default function () {
         live: "https://portfolio-v2-puce-theta.vercel.app/",
       },
       {
-        id: 5,
+        id: 6,
         projectRef: 8,
         name: "The Spiral",
         image: require("../../assets/spiral.png"),
@@ -58,7 +69,7 @@ export default function () {
         live: "https://codepen.io/rogerio-romao/full/mdevOwm",
       },
       {
-        id: 6,
+        id: 7,
         projectRef: 11,
         name: "Music Player",
         image: require("../../assets/music-player.png"),
@@ -67,17 +78,6 @@ export default function () {
           "I wanted to program something similar to Winamp in Javascript and learn how to handle audio on the web. I am very pleased with the look and functionality i managed to include, and have some ideas to expand it in the future.",
         source: "https://codepen.io/rogerio-romao/pen/vYNvBzd",
         live: "https://codepen.io/rogerio-romao/full/vYNvBzd",
-      },
-      {
-        id: 7,
-        projectRef: 1,
-        name: "Converse",
-        image: require("../../assets/converse.png"),
-        shortDesc: "A responsive units conversion app.",
-        longDesc:
-          "Unit Conversion Program, does distances, weights and temperatures. Sleek flat style design and attention to user experience were my focus, as well as functional and well structured and documented code. Built using JQuery.",
-        source: "https://codepen.io/rogerio-romao/pen/RwPaaRR",
-        live: "https://codepen.io/rogerio-romao/full/RwPaaRR",
       },
       {
         id: 8,
