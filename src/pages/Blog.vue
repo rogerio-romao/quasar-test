@@ -1,10 +1,13 @@
 <template>
   <q-page padding>
     <!-- content -->
-    <h4 class="q-pl-md text-h4 text-weight-light text-uppercase text-blue-grey">Blog</h4>
-    <p
-      class="q-pl-md text-subtitle1 q-mb-lg text-blue-grey"
-    >New addition to the site, decided to start blogging here and then when I learn something interesting.</p>
+    <h4 class="q-pl-md text-h4 text-weight-light text-uppercase text-blue-grey">
+      Blog
+    </h4>
+    <p class="q-pl-md text-subtitle1 q-mb-lg text-blue-grey">
+      New addition to the site, decided to start blogging here and then when I
+      learn something interesting.
+    </p>
     <div class="pills q-pl-md text-blue-grey q-mb-md">
       Filter:
       <q-badge
@@ -43,7 +46,9 @@
         <q-card dark class="my-card q-pa-lg q-mb-md">
           <q-card-section>
             <span class="text-h4">{{ post.attributes.title }}</span>
-            <span class="text-subtitle1 text-weight-bold float-right">{{ post.attributes.date }}</span>
+            <span class="text-subtitle1 text-weight-bold float-right">{{
+              post.attributes.date
+            }}</span>
           </q-card-section>
 
           <q-separator dark inset />
@@ -62,7 +67,8 @@
                 outline
                 color="lime"
                 text-color="white"
-              >{{ tag }}</q-chip>
+                >{{ tag }}</q-chip
+              >
             </div>
           </q-card-section>
         </q-card>
@@ -72,43 +78,69 @@
 </template>
 
 <script>
-import { useMeta } from 'quasar'
-import { computed, ref } from 'vue'
+import { useMeta } from "quasar";
+import { computed, ref } from "vue";
 
-import welcome from '../blog/welcome.md'
-import gsap from '../blog/gsap.md'
-import googling from '../blog/googling.md'
-import learning from '../blog/learning.md'
+import welcome from "../blog/welcome.md";
+import gsap from "../blog/gsap.md";
+import googling from "../blog/googling.md";
+import learning from "../blog/learning.md";
+
 export default {
   setup() {
     const metadata = useMeta({
-      title: 'Blog',
-      titleTemplate: title => `${title} - Rogerio's Portfolio`,
-    })
+      title: "Blog",
+      titleTemplate: (title) => `${title} - Rogerio's Portfolio`,
+    });
 
     const posts = [welcome, gsap, googling, learning].sort((a, b) => {
-      return new Date(a.attributes.date) < new Date(b.attributes.date) ? 1 : -1
-    })
+      return new Date(a.attributes.date) < new Date(b.attributes.date) ? 1 : -1;
+    });
 
-    const tagFilter = ref('all')
+    const tagFilter = ref("all");
 
     const filteredPosts = computed(() => {
-      if (tagFilter.value === 'all') {
-        return posts
+      if (tagFilter.value === "all") {
+        return posts;
       }
 
-      return posts.filter(post => {
-        return post.attributes.tags.some(tag => tag.includes(tagFilter.value))
-      })
-    })
+      return posts.filter((post) => {
+        return post.attributes.tags.some((tag) =>
+          tag.includes(tagFilter.value)
+        );
+      });
+    });
 
     const allTags = computed(() => {
-      return [...new Set(posts.reduce((acc, post) => {
-        return acc.concat(post.attributes.tags)
-      }, []))]
-    })
+      return [
+        ...new Set(
+          posts.reduce((acc, post) => {
+            return acc.concat(post.attributes.tags);
+          }, [])
+        ),
+      ];
+    });
 
-    const pillColors = ['pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-blue', 'cyan', 'teal', 'green', 'light-green', 'lime', 'yellow', 'amber', 'orange', 'deep-orange', 'brown', 'grey', 'blue-grey']
+    const pillColors = [
+      "pink",
+      "purple",
+      "deep-purple",
+      "indigo",
+      "blue",
+      "light-blue",
+      "cyan",
+      "teal",
+      "green",
+      "light-green",
+      "lime",
+      "yellow",
+      "amber",
+      "orange",
+      "deep-orange",
+      "brown",
+      "grey",
+      "blue-grey",
+    ];
 
     return {
       metadata,
@@ -117,9 +149,9 @@ export default {
       filteredPosts,
       allTags,
       pillColors,
-    }
-  }
-}
+    };
+  },
+};
 </script>
 
 <style scoped>
