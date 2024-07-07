@@ -37,14 +37,14 @@ export default function () {
       },
       {
         id: 4,
-        projectRef: 22,
-        name: "Color Palette Creator",
-        image: require("../../assets/palette.png"),
-        shortDesc: "Create color schemes and export them to use on your app.",
+        projectRef: 26,
+        name: "SFW Shelving Configurator",
+        image: require("../../assets/sfw-configurator.png"),
+        shortDesc: "A configurator for SFW shelving company's webstore.",
         longDesc:
-          "This uses Vue3 and Vuex. It allows you to create color schemes and export them as CSS to use on your app. You set a main color, and it generates a bunch of variations of that color based on color theory. You can then pick variations and edit them to create a new color scheme, or have the app generate a random scheme for you with those variations. You can login and save your color schemes to your account.",
-        source: "https://github.com/rogerio-romao/pallete-creator",
-        live: "https://palette-creator.surge.sh/",
+          "This is made in React, using P5 for drawing the shelves and units. It is a configurator for the SFW shelving company's webstore, that allows the user to choose the size, color, and dimensions for the shelves. The user can save the configuration and retrieve it later. Once the user is happy with the configuration, they can add it to the cart.",
+        source: "#",
+        live: "#",
       },
       {
         id: 5,
@@ -67,28 +67,6 @@ export default function () {
           "Very proud of this one, programmed from scratch, pushing the envelope with animation and canvas, custom functions including a stagger using requestanimationframe, and a custom music player. Won a Codepen Pick! Also works as a standalone desktop app, planning to have this for sale in App Store.",
         source: "https://codepen.io/rogerio-romao/pen/mdevOwm",
         live: "https://codepen.io/rogerio-romao/full/mdevOwm",
-      },
-      {
-        id: 7,
-        projectRef: 11,
-        name: "Music Player",
-        image: require("../../assets/music-player.png"),
-        shortDesc: "A javascript music player. Simple but beautiful and solid.",
-        longDesc:
-          "I wanted to program something similar to Winamp in Javascript and learn how to handle audio on the web. I am very pleased with the look and functionality i managed to include, and have some ideas to expand it in the future.",
-        source: "https://codepen.io/rogerio-romao/pen/vYNvBzd",
-        live: "https://codepen.io/rogerio-romao/full/vYNvBzd",
-      },
-      {
-        id: 8,
-        projectRef: 6,
-        name: "Guess The Number",
-        image: require("../../assets/guess-number.png"),
-        shortDesc: "Guess the number game.",
-        longDesc:
-          "My take on the common programming challenge of Guess the Number game. I tried to make it into as polished an app as possible - attention to details, a nice visualizer pattern for the guesses, automatic adjustment of the maximum guesses determined by the max number chosen by the user and a nice interface.",
-        source: "https://codepen.io/rogerio-romao/pen/XWbQbbN",
-        live: "https://codepen.io/rogerio-romao/full/XWbQbbN",
       },
     ],
   };

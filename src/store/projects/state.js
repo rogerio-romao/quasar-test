@@ -624,6 +624,37 @@ export default function () {
           body: "You can then filter the results by type of store. If you are logged in, you also have the ability to save your preferred store to your account. There is on each card a Show on Map button that will take you to Google Maps with the directions to that store from your location. All the css and layout is custom css, using css modules. Also pagination is built from scratch with no dependencies.",
         },
       },
+      {
+        id: 26,
+        name: "SFW Shelving Configurator",
+        type: "Full-Stack",
+        shortDesc: "A configurator for SFW shelving company's webstore.",
+        technologies: [
+          "React",
+          "P5",
+          "Javascript",
+          "CSS3",
+          "HTML5",
+          "BigCommerce",
+        ],
+        image: require("../../assets/sfw-configurator.png"),
+        source: "#",
+        live: "#",
+        longDesc:
+          "This is made in React, using P5 for drawing the shelves and units. It is a configurator for the SFW shelving company's webstore, that allows the user to choose the size, color, and dimensions for the shelves. The user can save the configuration and retrieve it later. Once the user is happy with the configuration, they can add it to the cart.",
+        showDetails: true,
+        details: {
+          head: "This was a very challenging project, as it involved a lot of state management, and the drawing of the shelves and units was quite complex. I used P5 for the drawing, and React for the state management. I used a thin wrapper for P5js to work within React, and coded all the drawing parts in P5, as the dimensions, colors and type of units vary. The user can also change the configuration at any time, and the cart will update accordingly, with a view that shows their entire configuration as a list.",
+          images1: [
+            require("../../assets/sfw-configurator-details1.png"),
+            require("../../assets/sfw-configurator-details2.png"),
+            require("../../assets/sfw-configurator-details3.png"),
+            require("../../assets/sfw-configurator-details4.png"),
+            require("../../assets/sfw-configurator-details5.png"),
+            require("../../assets/sfw-configurator-details6.png"),
+          ],
+        },
+      },
     ],
   };
 }
