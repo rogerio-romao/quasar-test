@@ -5,7 +5,7 @@ London
 
 **Phone Number**: 07427024976
 
-**Email**: djgroovy@gmail.com
+**Email**: rogerio@rogerioromao.dev
 
 **LinkedIn Profile**:
 [Rogerio Romao LinkedIn](https://www.linkedin.com/in/rogerio-romao/)
@@ -95,10 +95,15 @@ For detailed information on projects, please visit my portfolio:
 
 **Key Responsibilities and Achievements:**
 
-- Developing backend solutions for all projects.
-- Creating custom React frontends.
-- Assisting frontend engineers with Stencil.
-- Improving company processes, architecture, and tech stack design.
+- Worked with multiple technologies including Nextjs, React, Typescript, Express, Vue, Tailwind and Big Commerce Stencil.
+- Integrating APIs and SDKs, from ERP's like Odoo and Netsuite, to search platforms like Algolia, with BigCommerce API's, creating the backend/middlewares that make e-commerce websites tick and keep their data synchronized between platforms.
+- Worked in a sprint format to deliver projects within strict deadlines.
+- Project architecture from client requirements, deciding on how and what tools to use for the required outcomes, including complex problems such as getting real time prices and stocks for a company with 250k products.
+- Promoted from junior to senior full stack engineer within 2.5 years.
+- Coordinate all technical discussions with customers, both answering their concerns, as well as being present on initial discussions to make sure we are asking the right questions.
+- Research and introduce new processes and practices such as better CI, testing, better git practices, linting etc.
+- Creating template starters for both backend and frontend projects that have all the boilerplate and best practices baked in.
+- Created a NPM package for better and simpler data fetching, wrapping Fetch to give result type responses (no try-catch), typed responses etc.
 
 ---
 

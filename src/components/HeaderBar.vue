@@ -50,12 +50,12 @@
             :label="$q.screen.gt.sm ? 'CV' : ''"
             exact
           />
-          <q-route-tab
+          <!-- <q-route-tab
             icon="article"
             to="/blog"
             :label="$q.screen.gt.sm ? 'Blog' : ''"
             exact
-          />
+          /> -->
         </q-tabs>
       </template>
     </q-banner>

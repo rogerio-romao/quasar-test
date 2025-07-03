@@ -6,9 +6,9 @@
   "author": "Rogerio Romao <58592935+rogerio-romao@users.noreply.github.com>",
   "private": true,
   "scripts": {
-    "dev": "quasar dev",
-    "serve": "quasar serve --history",
-    "build": "quasar build",
+    "dev": "NODE_OPTIONS=--openssl-legacy-provider quasar dev",
+    "serve": "NODE_OPTIONS=--openssl-legacy-provider quasar serve --history",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider quasar build",
     "build:pwa": "quasar build -m pwa",
     "lint": "eslint --ext .js,.vue ./",
     "test": "echo \"No test specified\" && exit 0"

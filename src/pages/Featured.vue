@@ -4,9 +4,10 @@
       Featured Projects
     </h4>
     <p class="q-pl-md text-subtitle1 q-mb-lg text-blue-grey">
-      A selection of some of my best projects. See the portfolio page for a
-      bigger collection of works, and the about page to learn more about me and
-      contact details.
+      A selection of some of my best projects. I also do a lot of backend API
+      integration work, that is missing here because it's not very suited for
+      visual display. See the portfolio page for a bigger collection of works,
+      and the about page to learn more about me and contact details.
     </p>
     <q-separator></q-separator>
     <div
