@@ -111,7 +111,9 @@
               class="q-my-lg shadow-8"
             ></q-img>
 
-            <p class="text-subtitle project-description">
+            <p
+              class="text-subtitle project-description bg-light-blue-6 q-pa-sm text-white rounded-borders shadow-2"
+            >
               {{ currentProject.longDesc }}
             </p>
 
@@ -120,11 +122,11 @@
                 Project Details
               </h5>
 
-              <p class="text-left q-mb-lg">
+              <p class="text-left q-mb-lg text-block">
                 {{ currentProject.details.head }}
               </p>
 
-              <div class="q-gutter-md q-mb-lg">
+              <div class="q-gutter-md q-mb-lg q-mt-lg">
                 <img
                   v-for="(image, i) in currentProject.details.images1"
                   :key="i"
@@ -135,11 +137,11 @@
               </div>
 
               <div v-if="currentProject.details.body">
-                <p class="text-left q-mb-lg">
+                <p class="text-left q-mb-lg text-block">
                   {{ currentProject.details.body }}
                 </p>
 
-                <div class="q-gutter-sm q-mb-lg">
+                <div class="q-gutter-sm q-mb-lg q-mt-lg">
                   <img
                     v-for="(image, i) in currentProject.details.images2"
                     :key="i"
@@ -151,11 +153,11 @@
               </div>
 
               <div v-if="currentProject.details.footer">
-                <p class="text-left q-mb-lg">
+                <p class="text-left q-mb-lg text-block">
                   {{ currentProject.details.footer }}
                 </p>
 
-                <div class="q-gutter-sm">
+                <div class="q-gutter-sm q-mb-lg q-mt-lg">
                   <img
                     v-for="(image, i) in currentProject.details.images3"
                     :key="i"
@@ -265,5 +267,12 @@ export default {
 }
 .detail-image {
   max-width: 100%;
+}
+.text-block {
+  max-width: 86%;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.6;
+  font-size: 1.1rem;
 }
 </style>
