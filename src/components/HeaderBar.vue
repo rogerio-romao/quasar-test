@@ -6,8 +6,6 @@
         <q-badge color="primary" align="top">v2.0</q-badge>
       </q-toolbar-title>
 
-      <q-badge color="primary">&copy; 2022</q-badge>
-
       <q-avatar size="lg">
         <img
           src="../statics/images/rogerio_avatar.jpeg"
@@ -23,8 +21,8 @@
           inline-label
           dense
           shrink
-          class="text-cyan-13"
-          active-color="light-green"
+          class="text-white"
+          active-color="light-green-13"
         >
           <q-route-tab
             icon="home"

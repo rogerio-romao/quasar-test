@@ -11,7 +11,7 @@
     </p>
     <q-separator></q-separator>
     <div
-      class="flex wrap justify-center q-pa-md q-gutter-md q-mt-lg card-parent"
+      class="flex wrap justify-center q-pa-md q-gutter-lg q-mt-lg card-parent"
     >
       <q-card
         class="my-card non-selectable"
@@ -21,10 +21,11 @@
         <q-img
           :src="feature.image"
           @click="setBigImage(feature.name, feature.image)"
+          style="border-bottom: 2px solid #1876d2"
           class="cursor-pointer"
         >
           <q-tooltip
-            class="bg-lime-6 text-dark shadow-4"
+            class="bg-light-green-13 text-dark shadow-4"
             :delay="800"
             transition-show="scale"
             transition-hide="scale"
@@ -41,7 +42,7 @@
           >
             {{ feature.name }}
           </div>
-          <div class="text-subtitle2 text-info">{{ feature.shortDesc }}</div>
+          <div class="text-light-blue-9 text-info">{{ feature.shortDesc }}</div>
         </q-card-section>
 
         <q-card-section class="q-pt-none feature-longDesc">{{
@@ -73,7 +74,7 @@
                 path: '/portfolio',
                 query: { project: feature.projectRef },
               }"
-              color="light-blue-12"
+              color="light-green-13"
               class="more-btn"
               size="sm"
               >More Info</q-btn
@@ -152,14 +153,15 @@ export default {
 <style lang="sass" scoped>
 .my-card
   flex: 1
-  min-height: 570px
-  min-width: 300px
+  min-height: 600px
+  min-width: 380px
   width: 100%
-  max-width: 400px
+  max-width: 500px
   .source-btn
     margin-right: 2px
   .more-btn
     margin-left: 2px
+    color: #0a6064 !important
   &:hover
     box-shadow: 0px 0px 7px 2px #2278cf45
     animation: 0.19s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s 1 shake
