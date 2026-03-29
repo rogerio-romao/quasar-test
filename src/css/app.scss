@@ -1,43 +1,105 @@
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton+SC&family=Manrope:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap");
 
-// app global css in SCSS form
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --animate-duration: 0.65s;
 }
 
-html {
-  background-color: #e2f5fe;
+* {
+  box-sizing: border-box;
 }
 
-.post-content h1,
-.post-content h2,
-.post-content h3,
-.post-content h4,
-.post-content h5,
-.post-content h6 {
-  color: #e72565;
+html,
+body {
+  background-color: #0a0a0f;
+  color: #e4e4e7;
+  font-family: "Manrope", sans-serif;
+  scroll-behavior: smooth;
 }
 
-.post-content p {
-  color: #e8e8e8;
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a1a2e;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f0b429;
+}
+
+// CV markdown content styling
+.cv-content h1,
+.cv-content h2,
+.cv-content h3 {
+  color: #f0b429;
+  font-family: "Anton SC", sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.cv-content h2 {
   font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid #1a1a2e;
+  padding-bottom: 0.5rem;
+  margin-top: 1.5rem;
 }
 
-.post-content p strong {
-  color: #8bc34a;
-  font-size: 1.2rem;
+.cv-content p {
+  color: #a1a1aa;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
 }
 
-.post-content a {
-  color: #3dccea;
+.cv-content strong {
+  color: #e4e4e7;
 }
 
-.post-content a:hover {
-  color: #3da5ea;
+.cv-content ul {
+  color: #a1a1aa;
+  font-size: 0.9rem;
+  padding-left: 1.25rem;
+  margin-bottom: 0.75rem;
 }
 
-.post-content pre {
-  background-color: #273238;
-  padding: 1rem;
-  font-family: "Inconsolata", monospace;
+.cv-content li {
+  margin-bottom: 0.25rem;
+}
+
+.cv-content a {
+  color: #6366f1;
+  text-decoration: none;
+}
+
+.cv-content a:hover {
+  color: #f0b429;
+}
+
+// Reveal animation for scroll-triggered elements
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+}
+
+.reveal.visible {
+  animation: revealUp 0.6s ease forwards;
 }

@@ -25,39 +25,6 @@ export default function () {
         live: "https://github.com/rogerio-romao/typescript-backend-starter",
       },
       {
-        id: 3,
-        projectRef: 25,
-        name: "Davidoff US Store Locator",
-        image: require("../../assets/davidoff-store-locator.png"),
-        shortDesc: "A store locator for the Davidoff brand's US webstore.",
-        longDesc:
-          "This is the store locator for the Davidoff brand's US webstore. I coded both the backend and frontend. It uses Nextjs 14 with the App Router, and the Geolocation API to get the user's location, and the Google Maps API to show the stores. It is responsive and works on any device. Data is stored in Supabase. Search works by inputting a city or zip code, then calculating the distance to the stores and showing the closest ones first.",
-        source: "#",
-        live: "https://us.davidoffgeneva.com/store-locator",
-      },
-      {
-        id: 4,
-        projectRef: 26,
-        name: "SFW Shelving Configurator",
-        image: require("../../assets/sfw-configurator.png"),
-        shortDesc: "A configurator for SFW shelving company's webstore.",
-        longDesc:
-          "This is made in React, using P5 for drawing the shelves and units. It is a configurator for the SFW shelving company's webstore, that allows the user to choose the size, color, and dimensions for the shelves. The user can save the configuration and retrieve it later. Once the user is happy with the configuration, they can add it to the cart.",
-        source: "#",
-        live: "#",
-      },
-      {
-        id: 5,
-        projectRef: 20,
-        name: "Online Portfolio/CV V2",
-        image: require("../../assets/portfoliov2.png"),
-        shortDesc: "My online portfolio / CV website",
-        longDesc:
-          "My 2.0 portfolio. First time exploring the Quasar UI library. It is Vue3 based, using the composition API, with Vuex handling the data. Went for a streamlined look, and ease of use when editing. Mobile responsive. ",
-        source: "https://github.com/rogerio-romao/quasar-test",
-        live: "https://portfolio-v2-puce-theta.vercel.app/",
-      },
-      {
         id: 6,
         projectRef: 8,
         name: "The Spiral",

@@ -1,10 +1,5 @@
 ### Rogerio Manuel Cardoso Romao
 
-**Address**: Trinity Square, Flat 92, 23-59 Staines Road, TW33GD, Hounslow,
-London
-
-**Phone Number**: 07427024976
-
 **Email**: rogerio@rogerioromao.dev
 
 **LinkedIn Profile**:
@@ -13,7 +8,7 @@ London
 **GitHub Profile**: [Rogerio Romao GitHub](https://github.com/rogerio-romao)
 
 **Personal Website/Portfolio**:
-[Rogerio Romao Portfolio](https://portfolio-v2-puce-theta.vercel.app/)
+[Rogerio Romao Portfolio](https://rogerioromao.dev/)
 
 ---
 
@@ -21,17 +16,7 @@ London
 
 Full-Stack Engineer working primarily on E-Commerce and BigCommerce
 specifically, skilled in Node backends, React frontends, and Typescript.
-Currently Senior Full Stack at Calashock.
-
----
-
-### Education
-
-**Incomplete University Degree**: Business & IT
-
-**Institution**: ISLA (Instituto Politécnico de Santarém)
-
-**Location**: Santarem, Portugal
+Currently Senior Full Stack Engineer at Purrform.
 
 ---
 
@@ -43,9 +28,7 @@ Currently Senior Full Stack at Calashock.
 
 - **Backend Development**: NodeJS
 
-- **Databases**: SQL, basic knowledge of databases
-
-- **Programming Languages**: Python (some knowledge)
+- **Databases**: Postgres, SQLite, Supabase
 
 **Soft Skills:**
 
@@ -79,7 +62,7 @@ For detailed information on projects, please visit my portfolio:
 
 - Music production and DJing
 - Web development and programming
-- Learning new technologies and programming languages
+- Learning new technologies
 
 ---
 
@@ -87,11 +70,26 @@ For detailed information on projects, please visit my portfolio:
 
 ##### **Senior Full-Stack Engineer**
 
+**Company**: Purrform Ltd.
+
+**Location**: London (remote)
+
+**Dates**: June 2024 - Present
+
+**Key Responsibilities and Achievements:**
+
+- Leading the development of e-commerce solutions for Purrform, utilizing a tech stack that includes Nextjs, React, Typescript, Express, Vue, Tailwind and Big Commerce Stencil.
+- Architecting and implementing complex integrations between various platforms, including Klaviyo, Stripe, Supabase, and BigCommerce APIs.
+- Manage the Stencil frontend, the NodeJS custom backend we created to add lots of custom features to BigCommerce, including referrals, loyalty points, delivery date picker and many more.
+- Created a NextJS dashboard for facilitating the management of all the custom features we have, as well as giving insights on the data, such as sales and orders statistics, coupon usage, and customer behavior.
+
+##### **Senior Full-Stack Engineer**
+
 **Company**: Calashock Ltd.
 
 **Location**: London (remote)
 
-**Dates**: February 2022 - Present
+**Dates**: February 2022 - June 2024
 
 **Key Responsibilities and Achievements:**
 
@@ -107,36 +105,9 @@ For detailed information on projects, please visit my portfolio:
 
 ---
 
-##### **Marketplace Manager**
+##### **Other Jobs**
 
-**Company**: Ladbrokes Coral
-
-**Location**: Plaistow
-
-**Dates**: September 2016 - March 2020
-
-**Key Responsibilities and Achievements:**
-
-- Managed two retail shops, ensuring the achievement of KPIs.
-- Responsible for hiring, recruiting, and training staff.
-- Handled general administration of day-to-day activities.
-- Promoted three times during this period.
-
----
-
-##### **CEO**
-
-**Company**: Dancefloor Academy
-
-**Location**: Lisboa, Portugal
-
-**Dates**: January 2008 - August 2015
-
-**Key Responsibilities and Achievements:**
-
-- Owned and operated the music/dj/producer school Dancefloor Academy.
-- Won several awards as the best in the country.
-- Responsible for administration, course design, and head teacher.
+In between, I did nothing related to web development, but worked in other fields, including teaching, running my own company, and management in the retail sector. Not super relevant, so keeping it short here.
 
 ---
 

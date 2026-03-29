@@ -1,23 +1,12 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <div class="min-h-screen bg-base font-manrope">
     <HeaderBar />
-
-    <q-page-container>
-      <router-view v-slot="{ Component }">
-        <transition
-          appear
-          enter-active-class="animated fadeIn"
-          leave-active-class="animated fadeOut"
-        >
-          <component :is="Component" />
-        </transition>
-      </router-view>
-    </q-page-container>
-  </q-layout>
+    <router-view />
+  </div>
 </template>
 
 <script>
-import { defineComponent, Component } from 'vue'
+import { defineComponent } from 'vue'
 import HeaderBar from 'src/components/HeaderBar.vue'
 
 export default defineComponent({
@@ -25,6 +14,3 @@ export default defineComponent({
   components: { HeaderBar },
 })
 </script>
-
-<style scoped>
-</style>
