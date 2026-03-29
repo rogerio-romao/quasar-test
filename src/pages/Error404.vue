@@ -23,6 +23,7 @@
 </template>
 
 <script>
+/* eslint-disable vue/multi-word-component-names */
 import { defineComponent } from 'vue'
 import { useMeta } from 'quasar'
 

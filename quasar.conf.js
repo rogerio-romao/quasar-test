@@ -36,7 +36,6 @@ module.exports = configure(function (ctx) {
       // 'line-awesome',
       // 'roboto-font-latin-ext', // this or either 'roboto-font', NEVER both!
 
-      "roboto-font", // optional, you are not bound to it
       "material-icons", // optional, you are not bound to it
     ],
 
@@ -46,7 +45,13 @@ module.exports = configure(function (ctx) {
       env: require("dotenv").config().parsed,
       distDir: ctx.mode.spa ? "public" : null,
 
-      // transpile: false,
+      // Force sass-loader to use project-level sass 1.98.x instead of the
+      // 1.32.12 bundled inside @quasar/app (which lacks math.div support)
+      sassLoaderOptions: {
+        implementation: require('sass'),
+      },
+
+// transpile: false,
 
       // Add dependencies for transpiling with Babel (Array of string/regex)
       // (from node_modules, which are by default not transpiled).
