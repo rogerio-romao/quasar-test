@@ -1,7 +1,3 @@
-### Vincenzo Aglieri Rinella
-
-**Senior Project Delivery Manager @ Calashock**
-
 I am delighted to write a recommendation for Rogerio, a remarkable employee and Full Stack Developer. During our time working together in Calashock, I have been consistently impressed by Rogerio's technical expertise, dedication, and problem-solving abilities.
 
 Rogerio possesses an exceptional command of both front-end and back-end technologies. His proficiency in languages such as JavaScript and Typescript languages; React, Nextjs, Vue and Stencil frameworks. He has significantly contributed to the success of software development projects, he has great ability to integrate various technologies to create robust and efficient applications that meet complex technical requirements.

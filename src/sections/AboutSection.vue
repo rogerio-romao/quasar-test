@@ -31,7 +31,7 @@
                 Senior Full-Stack Engineer
               </p>
               <p class="font-manrope text-[#71717a] text-sm">
-                London, UK · Calashock Commerce
+                London, UK · Purrform Ltd
               </p>
             </div>
           </div>
@@ -41,11 +41,11 @@
             applications. Passionate about doing things well and with care.
             Currently working as a Senior Full-Stack Developer at
             <a
-              href="https://www.calashock.com/"
+              href="https://purrform.co.uk/"
               target="_blank"
               rel="noopener noreferrer"
               class="text-[#6366f1] hover:text-[#f0b429] transition-colors"
-              >Calashock Commerce</a
+              >Purrform Ltd</a
             >.
           </p>
 
@@ -77,65 +77,6 @@
         <!-- Right: CV timeline -->
         <div class="reveal">
           <div class="cv-content prose-sm max-w-none" v-html="cv.html"></div>
-
-          <!-- Courses toggle -->
-          <div class="mt-12 border-t border-[#1a1a2e] pt-8">
-            <button
-              class="flex items-center gap-3 font-alpha font-semibold text-[#e4e4e7] hover:text-[#f0b429] transition-colors mb-6 w-full text-left"
-              @click="coursesOpen = !coursesOpen"
-            >
-              <span>Courses & Learning</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-4 h-4 transition-transform duration-200 ml-auto"
-                :class="coursesOpen ? 'rotate-180' : ''"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-
-            <transition
-              enter-active-class="transition duration-200 ease-out"
-              enter-from-class="opacity-0 -translate-y-2"
-              enter-to-class="opacity-100 translate-y-0"
-              leave-active-class="transition duration-150 ease-in"
-              leave-from-class="opacity-100 translate-y-0"
-              leave-to-class="opacity-0 -translate-y-2"
-            >
-              <div v-if="coursesOpen">
-                <div v-for="school in schools" :key="school.title" class="mb-6">
-                  <h4
-                    class="font-mono text-xs text-[#f0b429] tracking-widest uppercase mb-3"
-                  >
-                    {{ school.title }}
-                  </h4>
-                  <ul class="space-y-2">
-                    <li v-for="course in school.courses" :key="course.title">
-                      <a
-                        :href="course.link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="font-manrope text-sm text-[#71717a] hover:text-[#a1a1aa] transition-colors"
-                      >
-                        {{ course.title }}
-                        <span class="text-[#1a1a2e] ml-1"
-                          >— {{ course.author }}</span
-                        >
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </transition>
-          </div>
         </div>
       </div>
     </div>

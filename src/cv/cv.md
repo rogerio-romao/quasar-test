@@ -8,7 +8,7 @@
 **GitHub Profile**: [Rogerio Romao GitHub](https://github.com/rogerio-romao)
 
 **Personal Website/Portfolio**:
-[Rogerio Romao Portfolio](https://portfolio-v2-puce-theta.vercel.app/)
+[Rogerio Romao Portfolio](https://rogerioromao.dev/)
 
 ---
 
