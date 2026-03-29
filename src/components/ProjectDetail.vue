@@ -18,23 +18,42 @@
           aria-label="Close"
           @click="$emit('close')"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-5 h-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
           </svg>
         </button>
 
         <div class="max-w-5xl mx-auto px-6 py-24">
           <!-- Header -->
           <div class="mb-10">
-            <span v-if="project.type" class="font-mono text-xs text-[#6366f1] tracking-widest uppercase">
+            <span
+              v-if="project.type"
+              class="font-mono text-xs text-[#6366f1] tracking-widest uppercase"
+            >
               {{ project.type }}
             </span>
-            <h2 class="font-syne font-bold text-4xl md:text-6xl text-[#e4e4e7] mt-2 mb-6">
+            <h2
+              class="font-alpha font-bold text-4xl md:text-6xl text-[#e4e4e7] mt-2 mb-6"
+            >
               {{ project.name }}
             </h2>
 
             <!-- Tech badges -->
-            <div v-if="project.technologies?.length" class="flex flex-wrap gap-2 mb-8">
+            <div
+              v-if="project.technologies?.length"
+              class="flex flex-wrap gap-2 mb-8"
+            >
               <span
                 v-for="tech in project.technologies"
                 :key="tech"
@@ -114,16 +133,16 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'ProjectDetail',
+  name: "ProjectDetail",
   props: {
     project: {
       type: Object,
       default: null,
     },
   },
-  emits: ['close'],
-})
+  emits: ["close"],
+});
 </script>
