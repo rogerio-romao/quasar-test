@@ -15,14 +15,14 @@ export default function () {
       },
       {
         id: 2,
-        projectRef: 24,
-        name: "Typescript Backend Starter",
-        image: require("../../assets/typescript.png"),
-        shortDesc: "My Typescript backend starter template.",
+        projectRef: 22,
+        name: "Color Palette Creator",
+        image: require("../../assets/palette.png"),
+        shortDesc: "A tool to create and manage color palettes.",
         longDesc:
-          "Boilerplate code takes an imense amount of time, and it's easy to forget important things. I built this template to be a starting point for my backend projects at work. It uses Typescript, bundling via ESBuild, my own custom ESLint preset, test ready with Vitest, CI enabled and Consola for logging. Using the new watch mode in Node, and setup as a template in Github, it's easy to get started with a new project.",
-        source: "https://github.com/rogerio-romao/typescript-backend-starter",
-        live: "https://github.com/rogerio-romao/typescript-backend-starter",
+          "This app allows you to create color schemes and export them as CSS to use on your app. You set a main color, and it generates a bunch of variations of that color based on color theory. You can then pick variations and edit them to create a new color scheme, or have the app generate a random scheme for you with those variations. You can save palettes and preview them on the app itself.",
+        source: "https://github.com/rogerio-romao/color-palette-creator",
+        live: "https://palette-creator.rogerioromao.dev",
       },
       {
         id: 6,
