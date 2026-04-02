@@ -276,20 +276,12 @@ export default function () {
         name: "Color Palette Creator",
         type: "Front-End",
         shortDesc: "Create color schemes and export them to use on your app.",
-        technologies: [
-          "Javascript",
-          "CSS3",
-          "HTML5",
-          "Vue3",
-          "Vuex",
-          "Firebase",
-          "Authentication",
-        ],
+        technologies: ["Javascript", "CSS3", "HTML5", "Vue3", "Vuex"],
         image: require("../../assets/palette.png"),
         source: "https://github.com/rogerio-romao/pallete-creator",
-        live: "https://palette-creator.surge.sh/",
+        live: "https://palette-creator.rogerioromao.dev/",
         longDesc:
-          "This uses Vue3 and Vuex. It allows you to create color schemes and export them as CSS to use on your app. You set a main color, and it generates a bunch of variations of that color based on color theory. You can then pick variations and edit them to create a new color scheme, or have the app generate a random scheme for you with those variations. You can login and save your color schemes to your account.",
+          "This uses Vue3 and Vuex. It allows you to create color schemes and export them as CSS to use on your app. You set a main color, and it generates a bunch of variations of that color based on color theory. You can then pick variations and edit them to create a new color scheme, or have the app generate a random scheme for you with those variations. You can save palletes and preview them on the app itself.",
         showDetails: false,
       },
       {
